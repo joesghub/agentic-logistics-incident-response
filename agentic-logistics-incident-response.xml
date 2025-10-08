@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2025-10-08 03:29:38">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<application_name>PepsiCo Deliveries</application_name>
+<application_scope>x_snc_pepsico_de_0</application_scope>
+<application_version>1.0.0</application_version>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>workload_4</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>efedf2cc9fac32107f4424482024abff</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>169f3ac09fec32107f4424482024ab49</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_1c36deab9f1c72107f4424482024ab03</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><description>ServiceNow server-side script designed to send delivery route data from ServiceNow to an external N8N automation workflow via webhook</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"route_id","value":"","description":"memory.route_id","invalidMessage":null}]</inputs><max_auto_executions>10</max_auto_executions><name>N8N Delivery Route Data Webhook Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 11:11:46</sys_created_on><sys_domain>global</sys_domain><sys_id>1c36deab9f1c72107f4424482024ab03</sys_id><sys_mod_count>1</sys_mod_count><sys_name>N8N Delivery Route Data Webhook Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_1c36deab9f1c72107f4424482024ab03</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 02:52:02</sys_updated_on><tool display_value="N8N Delivery Route Data Webhook Tool">d836deab9f1c72107f4424482024ab00</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>1161835369</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>129f3ac09fec32107f4424482024ab96</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d96f700000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>N8N Delivery Route Data Webhook Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>2c7e3a006dec321005f92247e6ed5a2d</update_guid>
+<update_guid_history>2c7e3a006dec321005f92247e6ed5a2d:1161835369,abf6764cfa6c32102c5c1674abb0f49a:1161835369,5c36deabd01c72100580b240fdebd306:1634368870</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_188ccee39fd872107f4424482024ab79</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><context/><conversation display_value="Created 2025-10-06 10:29:27">948cc2279fd872107f4424482024abfa</conversation><objective>990,736</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 10:29:26</sys_created_on><sys_domain>global</sys_domain><sys_id>188ccee39fd872107f4424482024ab79</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 10:30:49</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-648940024</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>129f3ac09fec32107f4424482024ab99</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7dd30000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>188ccee39fd872107f4424482024ab79</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>65fefe40d7ec3210b25b7f23bf739d99</update_guid>
+<update_guid_history>65fefe40d7ec3210b25b7f23bf739d99:-648940024</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_bea5ec6f9fd832107f4424482024abae</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent"><sn_aia_agent action="INSERT_OR_UPDATE"><description>Selects optimal routes and coordinate external execution</description><instructions>Step 1: Use the Lookup Delivery Delay Record Tool with the route id the user entered. If no delay record is found, respond with an apology and ask for alternate route or correction. Store the route id in permanently in memory as memory.route_id 
+
+Step 2: Analyze the route options and select an option_id that optimizes the corresponding distance_miles and calculated_impact. Store the **entire route object** (including option_id, route_number, distance_miles, and eta_minutes) in your memory as memory.chosen_option, not just the option_id string.
+memory.chosen_option must be a structured JSON object, not plain text.
+
+Step 2.1: Present the memory.chosen_option JSON object and your reasoning to the user for confirmation. DO NOT USE the the Update Delivery Delay Record Tool until the user confirms. 
+
+Step 3: Once the user confirms, use the Update Delivery Delay Record Tool with:
+- chosen_option = the entire memory.chosen_option JSON object
+- status = approved
+
+Step 4: Summarize the output of the Update Delivery Delay Record Tool for the user. DO NOT USE the Update Incident Tool until you present the summary. 
+
+Step 5: If the chosen_option is greater than or equal to $1000, update the incident urgency and impact to 1 - High. If the chosen_option is greater than or equal to $500 and less than $1000, update the incident urgency and impact to 2 - Medium. If the chosen_option is less than $500, update the incident urgency and impact to 3 - Low. Present the urgency and impact choices and your reasoning to the user for confirmation. DO NOT UPDATE the incident record until the user confirms. Use the Update Incident Tool.
+
+Step 6: Summarize the output of the Update Incident Tool for the user. DO NOT USE the N8N Delivery Route Data Webhook Tool until you present the summary. 
+
+Step 7: Use the N8N Delivery Route Data Webhook Tool with memory.route_id. Summarize the output of the tool. DO NOT PROCEED until you present the summary.
+
+Step 8: Thank the user for their time.</instructions><internal_name>global.x_snc_pepsico_de_0.Route Decision Agent</internal_name><name>Route Decision Agent</name><proficiency>- The agent is proficient in analyzing various route options to determine the most optimal route based on predefined business rules and cost optimization strategies. This involves evaluating the distance, time, and impact of each route to make informed decisions that align with business objectives.
+- The agent can utilize the Lookup Delivery Delay Record Tool to verify the existence of a delivery delay record for a specified route ID. This capability ensures that the agent can confirm the validity of the route information before proceeding with optimization analysis.
+- The agent is capable of storing the chosen route option as a structured JSON object in memory, which includes details such as option_id, route_number, distance_miles, and eta_minutes. This structured storage allows for accurate retrieval and presentation of route information.
+- The agent can use the Update Delivery Delay Record Tool to update the delivery delay record with the confirmed optimal route option. This ensures that the delivery records reflect the most current and approved route information.
+- The agent is capable of evaluating the financial impact of the chosen route option and updating the incident urgency and impact based on predefined thresholds. This involves categorizing the urgency as High, Medium, or Low, depending on the cost of the chosen option.
+- The agent can use the Update Incident Tool to update the incident record with the confirmed urgency and impact levels. This capability ensures that incident management systems are aligned with the latest route decisions and business priorities.
+- The agent can use the N8N Delivery Route Data Webhook Tool to retrieve and summarize detailed route data based on the stored route ID. This capability allows the agent to present a complete and accurate summary of the route information to the user.</proficiency><record_type>custom</record_type><role>You analyze route options and their calculated impacts to choose an optimal route based on business rules and cost optimization</role><run_as/><strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy><sys_class_name>sn_aia_agent</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 03:28:34</sys_created_on><sys_domain>global</sys_domain><sys_id>bea5ec6f9fd832107f4424482024abae</sys_id><sys_mod_count>82</sys_mod_count><sys_name>Route Decision Agent</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_bea5ec6f9fd832107f4424482024abae</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:04:27</sys_updated_on></sn_aia_agent></record_update>]]></payload>
+<payload_hash>843110629</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>169f3ac09fec32107f4424482024ab95</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d89a8e0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Route Decision Agent</target_name>
+<type>AI Agent</type>
+<update_domain>global</update_domain>
+<update_guid>db3e720068ec3210984729c03538be42</update_guid>
+<update_guid_history>db3e720068ec3210984729c03538be42:843110629,d9d9b2442bac321038621bb2df639f33:843110629,8f073a4cc76c3210c2b955a745c491c8:1009252146,8f073a4cc76c3210c2b955a745c491c8:1009252146,8f073a4cc76c3210c2b955a745c491c8:1009252146,1c389223cc5c721087eb2ffb35f2940b:108682769,26281223d55c72105b4718082f25ae3e:-180024669,5b27966fbf1c7210d79fd51d4a964e81:848404147,a527566f7a1c7210d23435a463ea5417:-1202230355,7d36deab6c1c721058ddb3dbca828898:-1816954906,5f551e2b2c1c72105476636b067c38a3:-610104156,f155da2b661c7210e237f928c0116030:1338328565,fc7706e7b79872107a9270c6a9a51b66:127332361,c36706e72e987210e4b3c5ae562cfa1f:-940082714,58b64a67cf987210d0ed8c6c08a5e667:-815114328,3ea6466790987210a90aec0b1d89e6bb:-23996863,45360627e3987210481bad3ebf5593b6:1123549276,a72646e31b987210791493c2d0280fc9:-599211962,27b5c2a382987210a6d72403ba1030cf:-1360892424,61b5c2a3a7987210911379433e8fc425:2076464273,2be4c22354987210e5dea0c7d903ac72:-14736357,fde4c223769872101b98a71290586708:-1200387953,f5a3c26f935872107c3afc10bd3c2784:-1536772590,3793026fdd5872108d2d3694115c4a68:1724153149,1e0386ebc158721014f8e1e57e1206dd:1297771948,7af246eb6b58721042dafba97fbcc57d:523007495,3cf2caab4e58721075501d9966320ad6:971333693,ab9286ab1758721090fcf44374fd48f5:1415849021,679246ab6b5872107b9845b1d4a765a2:-1058035420,b042c66b665872106c685045856d57e4:1414975871,5332866b1f5872108efe3fd2febb3203:1121044077,054f75a3d9587210ba723d2924a1cb5f:1656897166,6b3f35a3ed58721052bca07648ef0fd0:-1118301155,c33f35a3c658721070f41bf45a930aa4:-1605378951,611eb5ef8718721087d7ea067990e9a9:1858665481,7b0eb5ef841872109e9a22184f5b6c12:-1915751036,275db96f0d187210d45cc93219c9c4df:-1516816286,ce5db96f8318721020f0026ede82379d:2107826947,b0497127f6187210e464bf434386011d:265751460,7a39fde34718721083717badc4d07ec9:1431039799,c909f5e3dd187210a4fe53bf974be3aa:2128535661,d7f8fda30d187210fcf595009d6dbe2f:1920055502,f2a879a31918721056cff5a30a61d393:-1494673913,4d58f963fd1872104a39d8d8408f8467:-1647471099,63487963121872107743095b0a664a11:374355438,d31409e71110721010b81b66821d23c5:-486910044,bd148da738107210f335952541cb3c3e:657250234,6cc2c127fc107210a98ba2ee5c10659e:-433904349,898209e3dd1072101fde4bb84393bfd4:-2030645055,277209e3b0107210c2c77d37591b3bc6:-312958877,ba4201e3e21072109deb3d67d0b0694d:-974858668,c9420da30d1072107d7c7963998b051e:-697160082,0d1285a3591072103bd4c8dce5faaad4:-1402744823,370281a3bc107210a30d1a2f081909c8:-1673289333,f5004d2f5adc3210811ec72957df1bea:1797029524,4000892f34dc32105f6c8db7273ff03b:-803732480,23ff3c2f89dc3210a4f94ac646529a75:305365150,dfff7c2f0fdc3210625ccacc8cc2781e:-1731732370,207db8a715dc321009f2e0d9daaa41f0:-516609824,5f6db0a762dc32106f4541cc62bae771:1798771976,ec2dbc67c3dc321038a44fdd15caac5e:-2050937337,0f1d386791dc3210004e965500029734:1384293983,96bc7c27d5dc321087a06a7ab82cddb9:1825635980,ecbc74272fdc3210724672d85a7951dc:-1844226701,f18b30a300dc3210dc0b228ae1c8a52c:-1190440768,7b5bb8638cdc3210f3c179061bcf9009:-1423646754,a25b786313dc321053efc4798de97227:1616935724,17f974afd19c32107173ec626b14b711:1232563613,3df9bc6f649c321027b41a2d48ef1957:1605927948,11d838ebac9c3210315177d9595e298a:1675034530,bbc874ebbc9c321013b0b0046c0ce13a:-730533017,58c874eb069c321081c73938137849ce:1875047872,ceb830ebde9c32106aa8e17e9c607eeb:-2064419610,d868b4ab409c32109b60d26bf67408ec:-741613651,1358b4ab6a9c3210cc2efdc79497a51e:-1450001081,9608386bf79c3210027c51a3ef63b4a0:-838598413,fc08346bee9c3210edd2bd6c668cdb4c:1111895897,1427f0e7219c32104e1d2cf55c44448c:-278849652,aa17b0e76d9c3210fb51b11cf432969c:-361155368,811770e7749c32105d633d012d092b25:-1019505179,d417bca7219c32107649c24d9129dee5:-1573280566,941730e7779c3210b35bd23a53680f20:1558609374,9fbfac67865c321046d2cf137565cb7a:1125991583,9abfe067a25c321035eb7b8b2472524e:1555706483,5c3ce86f941c3210cd491eb3e48d1f1d:1839274269,cb2ca46f591c3210c61e0bc94dee3fed:1854866933</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_08b5355a9fc432107f4424482024ab77</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">a4eb7e2d9f4032107f4424482024ab1b</agent><context/><conversation display_value="Created 2025-09-20 01:21:41">9cb5b19a9fc432107f4424482024abc8</conversation><objective>help me resolve incident INC0010087</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 01:21:39</sys_created_on><sys_domain>global</sys_domain><sys_id>08b5355a9fc432107f4424482024ab77</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 01:22:42</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1503173215</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>169f3ac09fec32107f4424482024ab98</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7d230000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>08b5355a9fc432107f4424482024ab77</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>d9fefe40c1ec3210496fe2d218b31792</update_guid>
+<update_guid_history>d9fefe40c1ec3210496fe2d218b31792:1503173215,c6d97116de08321005e8143885d9de5b:1503173215</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_trigger_agent_usecase_m2m_07d9eb689f9832107f4424482024abfc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_trigger_agent_usecase_m2m"><sn_aia_trigger_agent_usecase_m2m action="INSERT_OR_UPDATE"><related_resource_record>8ea72ba49f9832107f4424482024abd5</related_resource_record><related_resource_table>sn_aia_usecase</related_resource_table><sys_class_name>sn_aia_trigger_agent_usecase_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-27 09:35:34</sys_created_on><sys_domain>global</sys_domain><sys_id>07d9eb689f9832107f4424482024abfc</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_trigger_agent_usecase_m2m_07d9eb689f9832107f4424482024abfc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-27 09:35:34</sys_updated_on><trigger_configuration display_value="x_snc_pepsico_de_0_delivery_delay">87d9eb689f9832107f4424482024abf8</trigger_configuration></sn_aia_trigger_agent_usecase_m2m></record_update>]]></payload>
+<payload_hash>1214910810</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>169f3ac09fec32107f4424482024ab9b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d85b280000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name/>
+<type>Trigger M2M</type>
+<update_domain>global</update_domain>
+<update_guid>1f2ebecc1eac3210a1c11cb1c1b79bb8</update_guid>
+<update_guid_history>1f2ebecc1eac3210a1c11cb1c1b79bb8:1214910810,cfd9ebe8a7983210824175ff8e69afc3:1214910810</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>incident_16ea32089fac32107f4424482024ab3c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="incident"><incident action="INSERT_OR_UPDATE"><active>true</active><activity_due>2025-10-08 05:09:09</activity_due><additional_assignee_list/><approval>not requested</approval><approval_history/><approval_set/><assigned_to display_value="Virtual Agent">98e75f443d8522107f4488addddbe292</assigned_to><assignment_group/><business_duration/><business_impact/><business_service/><business_stc/><calendar_duration/><calendar_stc/><caller_id/><category>inquiry</category><cause/><caused_by/><child_incidents>0</child_incidents><close_code/><close_notes/><closed_at/><closed_by/><cmdb_ci/><comments/><comments_and_work_notes/><company/><contact_type/><contract/><correlation_display/><correlation_id/><delivery_plan/><delivery_task/><description>Issue: Breakdown at I-75 MM 89 (transmission) </description><due_date/><escalation>0</escalation><expected_start/><follow_up/><group_list/><hold_reason/><impact>1</impact><incident_state>2</incident_state><knowledge>false</knowledge><location/><made_sla>true</made_sla><notify>1</notify><number>INC0010142</number><opened_at>2025-10-08 03:09:09</opened_at><opened_by display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</opened_by><order/><origin_id/><origin_table/><parent/><parent_incident/><priority>1</priority><problem_id/><reassignment_count>0</reassignment_count><rejection_goto/><reopen_count>0</reopen_count><reopened_by/><reopened_time/><resolved_at/><resolved_by/><rfc/><route_reason/><service_offering/><severity>3</severity><short_description>Whole Foods Truck 4645 Route 281917</short_description><skills/><sla_due/><sn_esign_document/><sn_esign_esignature_configuration/><state>2</state><subcategory/><sys_class_name>incident</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-08 03:09:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>16ea32089fac32107f4424482024ab3c</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:09:09</sys_updated_on><task_effective_number>INC0010142</task_effective_number><time_worked/><universal_request/><upon_approval>proceed</upon_approval><upon_reject>cancel</upon_reject><urgency>1</urgency><user_input/><variables/><watch_list/><wf_activity/><work_end/><work_notes/><work_notes_list/><work_start/></incident></record_update>]]></payload>
+<payload_hash>-2077536123</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>1a9f3ac09fec32107f4424482024ab49</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1dd1cfe0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>INC0010142</target_name>
+<type>Incident</type>
+<update_domain>global</update_domain>
+<update_guid>1b5ff28029ec32101f333b8508148f0e</update_guid>
+<update_guid_history>1b5ff28029ec32101f333b8508148f0e:-2077536123</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_01f7c8679fd432107f4424482024ab4e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 00:50:20">d5f70c679fd432107f4424482024abbe</conversation><objective>258,694</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 00:50:19</sys_created_on><sys_domain>global</sys_domain><sys_id>01f7c8679fd432107f4424482024ab4e</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 00:51:20</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-776609630</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>1a9f3ac09fec32107f4424482024ab97</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7b370000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>01f7c8679fd432107f4424482024ab4e</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>5dfe7e407eec3210bc402fe377960b8c</update_guid>
+<update_guid_history>5dfe7e407eec3210bc402fe377960b8c:-776609630</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_327ad4e39f9832107f4424482024ab17</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 02:11:18">d37a18e39f9832107f4424482024ab33</conversation><objective>230,563</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 02:11:16</sys_created_on><sys_domain>global</sys_domain><sys_id>327ad4e39f9832107f4424482024ab17</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 02:11:51</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>502634419</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>1a9f3ac09fec32107f4424482024ab9a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db815a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>327ad4e39f9832107f4424482024ab17</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>e5fefe40aeec3210d91c5f18d59370a7</update_guid>
+<update_guid_history>e5fefe40aeec3210d91c5f18d59370a7:502634419</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_8bcaad799fd032107f4424482024ab03</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><description>Finds the supply agreement record for the customer name or id that the user enters.</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"customer_name","value":"","description":"Name of customer","invalidMessage":null},{"name":"customer_id","value":"","description":"ID of customer","invalidMessage":null},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_pepsico_de_0_supply_agreement","displayValue":"Supply Agreement"},"query":"customer_name={{customer_name}}^ORcustomer_id={{customer_id}}","returnFields":[{"id":"stockout_penalty_rate","sublabel":"stockout_penalty_rate","label":"stockout_penalty_rate","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"deliver_window_hours","sublabel":"deliver_window_hours","label":"deliver_window_hours","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"customer_name","sublabel":"customer_name","label":"customer_name","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"customer_id","sublabel":"customer_id","label":"customer_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"sys_id","sublabel":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]}],"limit":"1","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Supply Agreement Lookup Record Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-30 21:32:48</sys_created_on><sys_domain>global</sys_domain><sys_id>8bcaad799fd032107f4424482024ab03</sys_id><sys_mod_count>11</sys_mod_count><sys_name>Supply Agreement Lookup Record Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_8bcaad799fd032107f4424482024ab03</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 08:56:08</sys_updated_on><tool display_value="Supply Agreement Lookup Record Tool">4fca69799fd032107f4424482024ab87</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>-769576344</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>1e9f3ac09fec32107f4424482024ab96</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d97df20000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Supply Agreement Lookup Record Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>617eba0065ec32105a2f0c902c3b873e</update_guid>
+<update_guid_history>617eba0065ec32105a2f0c902c3b873e:-769576344,d927b9afc4d4721048372deb1b92b72b:-769576344,f0b6f56f5fd47210ec42a1b362b25715:1696307959,2e5a77173054321030bda1a34e33493a:-769576344,623ca39350d03210514812325b2d79f2:728818725,0424dca23b9032103bdf59575540ccba:1696307959,b084f8d671d43210195679962cddd253:152565046,dab27cd20ed43210244869313254cfa4:1060504179,db54f6f1a29c32109f74875922e74f29:1526333234,2bf626358c1c321094df12f690b62a22:1060504179,3431f17957143210edd8c039659faae8:-2110967000,76fda97125143210e80c462cde8a92ff:-1816765255,47caad79fad03210487c56554ff4bd09:-1311057104</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_21a802ab9f9872107f4424482024ab21</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 10:12:37">f1a842ab9f9872107f4424482024ab1b</conversation><objective>990,736</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 10:12:37</sys_created_on><sys_domain>global</sys_domain><sys_id>21a802ab9f9872107f4424482024ab21</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 10:13:33</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-606508189</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>1e9f3ac09fec32107f4424482024ab99</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7ffe0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>21a802ab9f9872107f4424482024ab21</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>69fefe4049ec32108ef2351c9aa0c3a0</update_guid>
+<update_guid_history>69fefe4049ec32108ef2351c9aa0c3a0:-606508189</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>incident_56497ac09fac32107f4424482024aba0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="incident"><incident action="INSERT_OR_UPDATE"><active>true</active><activity_due>2025-10-08 05:02:04</activity_due><additional_assignee_list/><approval>not requested</approval><approval_history/><approval_set/><assigned_to display_value="Virtual Agent">98e75f443d8522107f4488addddbe292</assigned_to><assignment_group/><business_duration/><business_impact/><business_service/><business_stc/><calendar_duration/><calendar_stc/><caller_id/><category>inquiry</category><cause/><caused_by/><child_incidents>0</child_incidents><close_code/><close_notes/><closed_at/><closed_by/><cmdb_ci/><comments/><comments_and_work_notes/><company/><contact_type/><contract/><correlation_display/><correlation_id/><delivery_plan/><delivery_task/><description>Issue: Breakdown at I-80 MM 143 (coolant) </description><due_date/><escalation>0</escalation><expected_start/><follow_up/><group_list/><hold_reason/><impact>1</impact><incident_state>2</incident_state><knowledge>false</knowledge><location/><made_sla>true</made_sla><notify>1</notify><number>INC0010139</number><opened_at>2025-10-08 03:02:04</opened_at><opened_by display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</opened_by><order/><origin_id/><origin_table/><parent/><parent_incident/><priority>1</priority><problem_id/><reassignment_count>0</reassignment_count><rejection_goto/><reopen_count>0</reopen_count><reopened_by/><reopened_time/><resolved_at/><resolved_by/><rfc/><route_reason/><service_offering/><severity>3</severity><short_description>Whole Foods Truck 7352 Route 49228</short_description><skills/><sla_due/><sn_esign_document/><sn_esign_esignature_configuration/><state>2</state><subcategory/><sys_class_name>incident</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-08 03:02:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>56497ac09fac32107f4424482024aba0</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:02:04</sys_updated_on><task_effective_number>INC0010139</task_effective_number><time_worked/><universal_request/><upon_approval>proceed</upon_approval><upon_reject>cancel</upon_reject><urgency>1</urgency><user_input/><variables/><watch_list/><wf_activity/><work_end/><work_notes/><work_notes_list/><work_start/></incident></record_update>]]></payload>
+<payload_hash>1404862109</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>529f3ac09fec32107f4424482024ab4a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1dd1d330000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>INC0010139</target_name>
+<type>Incident</type>
+<update_domain>global</update_domain>
+<update_guid>975ffe80dfec3210ba6d91bde4d48137</update_guid>
+<update_guid_history>975ffe80dfec3210ba6d91bde4d48137:1404862109</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_06383e009fac32107f4424482024abc7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent"><sn_aia_agent action="INSERT_OR_UPDATE"><description>Wait 10 Seconds</description><instructions>Wait 10 Seconds</instructions><internal_name>global.x_snc_pepsico_de_0.Wait 10 Seconds</internal_name><name>Wait 10 Seconds</name><proficiency>- The AGENT is specialized in executing a precise waiting period of 10 seconds, ensuring that any task requiring a delay is handled with accuracy and consistency. This capability is central to the AGENT's function and is derived directly from its ROLE.
+- The AGENT is capable of interpreting tasks with the understanding that a 10-second wait is necessary, following the ACTION PLAN to ensure that this delay is implemented as part of its operational procedure.
+- The AGENT can utilize the 'Wait 10 Seconds' TOOL to execute a waiting period, with the ability to adjust the duration if specified, though it defaults to 10 seconds. This TOOL is essential for the AGENT to perform its designated tasks effectively.</proficiency><record_type>custom</record_type><role>Wait 10 Seconds</role><run_as/><strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy><sys_class_name>sn_aia_agent</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-08 02:57:56</sys_created_on><sys_domain>global</sys_domain><sys_id>06383e009fac32107f4424482024abc7</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Wait 10 Seconds</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_06383e009fac32107f4424482024abc7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 02:58:41</sys_updated_on></sn_aia_agent></record_update>]]></payload>
+<payload_hash>2132374133</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>529f3ac09fec32107f4424482024ab95</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d8f4200000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Wait 10 Seconds</target_name>
+<type>AI Agent</type>
+<update_domain>global</update_domain>
+<update_guid>745ebe8c50ac321005f5999e52bbaff5</update_guid>
+<update_guid_history>745ebe8c50ac321005f5999e52bbaff5:2132374133,fc887a40b6ac3210fd15c58d94e2dd29:2132374133,3258b240a4ac32109d4f0ce19ef4e337:1434125505,b9583e0028ac32102dbb06c1de48c53b:-307109717</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_075b8e239fd872107f4424482024abdc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 10:24:27">8b5b46639fd872107f4424482024ab55</conversation><objective>help me</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 10:24:26</sys_created_on><sys_domain>global</sys_domain><sys_id>075b8e239fd872107f4424482024abdc</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 10:25:33</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>2098975779</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>529f3ac09fec32107f4424482024ab98</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7cf70000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>075b8e239fd872107f4424482024abdc</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>99fefe40ebec32107599bb9c698b6990</update_guid>
+<update_guid_history>99fefe40ebec32107599bb9c698b6990:2098975779</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_41bab6c49fac32107f4424482024ab9a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent/><context/><conversation display_value="Created 2025-10-08 03:08:16">d9baf6c49fac32107f4424482024ab58</conversation><objective>help me with route id 603,668</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-08 03:08:15</sys_created_on><sys_domain>global</sys_domain><sys_id>41bab6c49fac32107f4424482024ab9a</sys_id><sys_mod_count>3</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:10:36</sys_updated_on><team display_value="Logistics Breakdown Resolution">1e19e7689f9832107f4424482024aba1</team><usecase display_value="Logistics Breakdown Resolution">8ea72ba49f9832107f4424482024abd5</usecase></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1159472977</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>529f3ac09fec32107f4424482024ab9b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db81c20000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>41bab6c49fac32107f4424482024ab9a</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>31fefe4045ec3210897b286d56f3a2d2</update_guid>
+<update_guid_history>31fefe4045ec3210897b286d56f3a2d2:1159472977</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_cc6174129fd432107f4424482024ab38</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><description>updates delivery delay record with calculated impacts</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"calculated_impact","value":"","description":"string of all option values","invalidMessage":null},{"name":"route_id","value":"","description":"route id for the delivery delay record","invalidMessage":null},{"name":"incident_sys_id","value":"","description":"sys_id of the incident record","invalidMessage":null},{"name":"crudInputs","value":{"operation":"update","table":{"value":"x_snc_pepsico_de_0_delivery_delay","displayValue":"Delivery Delay"},"query":"route_id={{route_id}}","fieldValues":[{"field":{"id":"calculated_impact","sublabel":"calculated_impact","label":"calculated_impact","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"{{calculated_impact}}"}},{"field":{"id":"status","sublabel":"status","label":"status","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"calculated"}},{"field":{"id":"incident_sys_id","sublabel":"incident_sys_id","label":"incident_sys_id","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"{{incident_sys_id}}"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Update Delivery Delay Record Tool</name><output_transformation_strategy>summary</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-02 06:38:53</sys_created_on><sys_domain>global</sys_domain><sys_id>cc6174129fd432107f4424482024ab38</sys_id><sys_mod_count>11</sys_mod_count><sys_name>Update Delivery Delay Record Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_cc6174129fd432107f4424482024ab38</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 08:56:08</sys_updated_on><tool display_value="Update Delivery Delay Record Tool">3751f85e9f9432107f4424482024abf6</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>-1472887205</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>569f3ac09fec32107f4424482024ab97</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d9a1ea0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Update Delivery Delay Record Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>737ef2005dec321002ce747ff4e2a43c</update_guid>
+<update_guid_history>737ef2005dec321002ce747ff4e2a43c:-1472887205,6d27b9af97d47210e42072fc20fedf32:-1472887205,f4b6f56f41d472107cad7c7ba18f901c:1336298700,3f855ca75c583210f1c1622d3bfb6c33:-657767091,a0d110afb0183210c1d9690a382ce769:461088258,0e80dcabcb1832107bfdafe2d22e772f:1769994340,80d8cce726d4321005073ec84327881a:-442523060,4cc704672bd43210a86593d31c5c8e63:-1166249079,58efff53ae943210a93b0fba41b2a9a4:-667872475,ef987313fc543210cc67fd2b050578b9:-668649527,f85f239bfcd03210f81f2cb9d4448abc:-1205378194,573ce7938fd0321018810170e5c50ece:725432353,4c617412bed432105a827bbd8c9bd93b:-425153432</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_295403429f4432107f4424482024abf2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">a4eb7e2d9f4032107f4424482024ab1b</agent><context/><conversation display_value="Created 2025-09-19 12:26:50">8e5483429f4432107f4424482024ab85</conversation><objective>help me resolve INC0010075</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-19 12:26:48</sys_created_on><sys_domain>global</sys_domain><sys_id>295403429f4432107f4424482024abf2</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 12:27:54</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1196395031</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>569f3ac09fec32107f4424482024ab9a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db812d0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>295403429f4432107f4424482024abf2</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>21fefe4087ec3210bf7660c96aad3ca6</update_guid>
+<update_guid_history>21fefe4087ec3210bf7660c96aad3ca6:1196395031,c6e9f11602083210432742e1a79d5ea5:1196395031</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_7778bacc9f6c32107f4424482024ab99</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Wait 10 Seconds">06383e009fac32107f4424482024abc7</agent><description>Wait 10 Seconds</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[]</inputs><max_auto_executions>10</max_auto_executions><name>Wait 10 Seconds</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-08 02:58:36</sys_created_on><sys_domain>global</sys_domain><sys_id>7778bacc9f6c32107f4424482024ab99</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Wait 10 Seconds</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_7778bacc9f6c32107f4424482024ab99</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 02:58:36</sys_updated_on><tool display_value="Wait 10 Seconds">bb78bacc9f6c32107f4424482024ab96</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>1474157728</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>5a9f3ac09fec32107f4424482024ab96</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d9c9060000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Wait 10 Seconds</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>c68e7e0006ec32104308945d1fb53fa4</update_guid>
+<update_guid_history>c68e7e0006ec32104308945d1fb53fa4:1474157728,fb783a407eac321047137754d1f33089:1474157728</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_1f5f3b139f9432107f4424482024ab8f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 00:12:48">635f3b139f9432107f4424482024abab</conversation><objective>537,735</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 00:12:48</sys_created_on><sys_domain>global</sys_domain><sys_id>1f5f3b139f9432107f4424482024ab8f</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 00:13:47</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>614897500</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>5a9f3ac09fec32107f4424482024ab99</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7fbc0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>1f5f3b139f9432107f4424482024ab8f</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>2dfefe404bec3210ab78651b5f4d969e</update_guid>
+<update_guid_history>2dfefe404bec3210ab78651b5f4d969e:614897500</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_0e077ca79f9c32107f4424482024ab95</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><description>updates delivery delay record with chosen option</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"chosen_option","value":"","description":"optimal route option for the delivery delay record","invalidMessage":null},{"name":"route_id","value":"","description":"route id for the delivery delay record","invalidMessage":null},{"name":"crudInputs","value":{"operation":"update","table":{"value":"x_snc_pepsico_de_0_delivery_delay","displayValue":"Delivery Delay"},"query":"route_id={{route_id}}","fieldValues":[{"field":{"id":"chosen_option","sublabel":"chosen_option","label":"chosen_option","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"{{chosen_option}}"}},{"field":{"id":"status","sublabel":"status","label":"status","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"approved"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Update Delivery Delay Record Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 04:16:00</sys_created_on><sys_domain>global</sys_domain><sys_id>0e077ca79f9c32107f4424482024ab95</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Update Delivery Delay Record Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_0e077ca79f9c32107f4424482024ab95</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 02:52:02</sys_updated_on><tool display_value="Update Delivery Delay Record Tool">46077ca79f9c32107f4424482024ab93</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>-545497871</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>5e9f3ac09fec32107f4424482024ab95</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d993160000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Update Delivery Delay Record Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>f67e7e006cec3210600db33494fb071a</update_guid>
+<update_guid_history>f67e7e006cec3210600db33494fb071a:-545497871,eff6764c586c3210bd7b58d1df408094:-545497871,b1ff3c2f2cdc3210ed8acbecd5596c62:-790872876,46077ca7459c3210b103f510e321d998:83539907</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_11201b859f7722107f4424482024abe1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Categorize ITSM Incident AI Agent">dd3f43fe9f2722107f4424482024ab60</agent><context/><conversation display_value="Created 2025-09-04 00:28:47">e9209b859f7722107f4424482024ab58</conversation><objective>please categorize INC0010003</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-04 00:28:46</sys_created_on><sys_domain>global</sys_domain><sys_id>11201b859f7722107f4424482024abe1</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-04 00:29:15</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-842331945</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>5e9f3ac09fec32107f4424482024ab98</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7da10000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>11201b859f7722107f4424482024abe1</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>29fefe40b5ec321013a993b0cc94c397</update_guid>
+<update_guid_history>29fefe40b5ec321013a993b0cc94c397:-842331945</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>x_snc_pepsico_de_0_supply_agreement_70572f649f9832107f4424482024ab3f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_pepsico_de_0_supply_agreement"><x_snc_pepsico_de_0_supply_agreement action="INSERT_OR_UPDATE"><customer_id>1</customer_id><customer_name>Whole Foods</customer_name><deliver_window_hours>3</deliver_window_hours><stockout_penalty_rate>250</stockout_penalty_rate><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-27 09:24:54</sys_created_on><sys_id>70572f649f9832107f4424482024ab3f</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-27 09:24:54</sys_updated_on></x_snc_pepsico_de_0_supply_agreement></record_update>]]></payload>
+<payload_hash>311272886</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>5e9f3ac09fec32107f4424482024ab9b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1dc8e3b0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>70572f649f9832107f4424482024ab3f</target_name>
+<type>Supply Agreement</type>
+<update_domain>global</update_domain>
+<update_guid>6a3f36006cec3210e47e79551f40613f</update_guid>
+<update_guid_history>6a3f36006cec3210e47e79551f40613f:311272886</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_b5077ca79f9c32107f4424482024ab8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><description>Finds the delivery delay record for the route id the Route Financial Analysis Agent just completed</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"route_id","value":"","description":"route id entered by the user","invalidMessage":null},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_pepsico_de_0_delivery_delay","displayValue":"Delivery Delay"},"query":"route_id={{route_id}}","returnFields":[{"id":"truck_id","sublabel":"truck_id","label":"truck_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"status","sublabel":"status","label":"status","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"route_id","sublabel":"route_id","label":"route_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"proposed_routes","sublabel":"proposed_routes","label":"proposed_routes","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"incident_sys_id","sublabel":"incident_sys_id","label":"incident_sys_id","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"calculated_impact","sublabel":"calculated_impact","label":"calculated_impact","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"customer_id","sublabel":"customer_id","label":"customer_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"chosen_option","sublabel":"chosen_option","label":"chosen_option","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"problem_description","sublabel":"problem_description","label":"problem_description","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"sys_id","sublabel":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]}],"limit":"1","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Lookup Delivery Delay Record Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 04:16:00</sys_created_on><sys_domain>global</sys_domain><sys_id>b5077ca79f9c32107f4424482024ab8e</sys_id><sys_mod_count>7</sys_mod_count><sys_name>Lookup Delivery Delay Record Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_b5077ca79f9c32107f4424482024ab8e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:04:18</sys_updated_on><tool display_value="Lookup Delivery Delay Record Tool">350778a79f9c32107f4424482024ab1f</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>553391777</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>929f3ac09fec32107f4424482024ab97</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d95e290000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Lookup Delivery Delay Record Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>eb6ef20006ec3210709e7affb8656038</update_guid>
+<update_guid_history>eb6ef20006ec3210709e7affb8656038:553391777,97c9fe04feac32101c6a9361e89fd0d1:553391777,380386ebfc58721096bf4a27725cac90:-356538427,e99246ab0b587210400879550c1b9a43:-1845313368,4da835a313187210dffa06a6a4e938d9:-356538427,13b241272a107210496d6ba77b639498:483470978,b5ffb82ff5dc321070644d4b807e4fc1:-940786498,908bfc632ddc32101559009de71210b2:-945708867,71077ca74a9c321094ff1d365287ce92:-670755616</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_22271e2f9f1c72107f4424482024ab2e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><context/><conversation display_value="Created 2025-10-06 11:16:03">8b27d66f9f1c72107f4424482024ab65</conversation><objective>264,595</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 11:16:02</sys_created_on><sys_domain>global</sys_domain><sys_id>22271e2f9f1c72107f4424482024ab2e</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 11:17:42</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1375203525</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>929f3ac09fec32107f4424482024ab9a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db80e30000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>22271e2f9f1c72107f4424482024ab2e</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>e1fefe402bec32109eaf7a5cee038ea4</update_guid>
+<update_guid_history>e1fefe402bec32109eaf7a5cee038ea4:1375203525</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_6b9873139f5432107f4424482024aba4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><description>step-by-step calculation for the calculated impact</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"eta_minutes","value":"","description":"value from delivery delay record proposed routes","invalidMessage":null},{"name":"deliver_window_hours","value":"","description":"value from supply agreement record","invalidMessage":null},{"name":"stockout_penalty_rate","value":"","description":"value from supply agreement record","invalidMessage":null}]</inputs><max_auto_executions>10</max_auto_executions><name>Calculated Impacts Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-05 23:43:19</sys_created_on><sys_domain>global</sys_domain><sys_id>6b9873139f5432107f4424482024aba4</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Calculated Impacts Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_6b9873139f5432107f4424482024aba4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 00:21:47</sys_updated_on><tool display_value="Calculated Impacts Tool">279873139f5432107f4424482024aba1</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>1428395800</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>969f3ac09fec32107f4424482024ab96</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d929050000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Calculated Impacts Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>086ef60017ec32106f806d69308476b5</update_guid>
+<update_guid_history>086ef60017ec32106f806d69308476b5:1428395800,326140a7e794321075187501b7c80ffa:1428395800,586d3fdbcb54321003ce2f0f74520e9d:147632021,a44a7317525432100be319e8becff78b:-1679212077,ef987313ac5432101f37e0d14a591bb3:-1794068214</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_1e5f639b9fd032107f4424482024abe5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-05 23:02:51">fa5fa39b9fd032107f4424482024ab0f</conversation><objective>Whole Foods</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-05 23:02:50</sys_created_on><sys_domain>global</sys_domain><sys_id>1e5f639b9fd032107f4424482024abe5</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-05 23:04:03</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-943516325</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>969f3ac09fec32107f4424482024ab99</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7efd0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>1e5f639b9fd032107f4424482024abe5</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>edfefe406bec3210f07da6d15e584b9c</update_guid>
+<update_guid_history>edfefe406bec3210f07da6d15e584b9c:-943516325</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_07caad799fd032107f4424482024ab1f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><description>Creates an incident record on the incident table</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"customer_id","value":"","description":"customer id on the delivery delay record","invalidMessage":null},{"name":"customer_name","value":"","description":"customer name on the delivery delay record","invalidMessage":null},{"name":"route_id","value":"","description":"route id on the delivery delay record","invalidMessage":null},{"name":"truck_id","value":"","description":"truck id on the delivery delay record","invalidMessage":null},{"name":"problem_description","value":"","description":"problem description on the delivery delay record","invalidMessage":null},{"name":"crudInputs","value":{"operation":"create","table":{"value":"incident","displayValue":"Incident"},"fieldValues":[{"field":{"id":"short_description","sublabel":"short_description","label":"Short description","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"{{customer_name}} Truck {{truck_id}} Route {{route_id}}"}},{"field":{"id":"description","sublabel":"description","label":"Description","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"Issue: {{problem_description}} "}},{"field":{"id":"assigned_to","sublabel":"assigned_to","label":"Assigned to","type":"reference","referenceTable":"sys_user","referenceTableDefaultField":"name","referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"98e75f443d8522107f4488addddbe292"}},{"field":{"id":"state","sublabel":"state","label":"State","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"2"}},{"field":{"id":"impact","sublabel":"impact","label":"Impact","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"1"}},{"field":{"id":"urgency","sublabel":"urgency","label":"Urgency","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"1"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Create Incident Tool</name><output_transformation_strategy>paraphrase</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-30 21:32:49</sys_created_on><sys_domain>global</sys_domain><sys_id>07caad799fd032107f4424482024ab1f</sys_id><sys_mod_count>4</sys_mod_count><sys_name>Create Incident Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_07caad799fd032107f4424482024ab1f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 08:54:11</sys_updated_on><tool display_value="Create Incident Tool">8fcaad799fd032107f4424482024ab1c</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>-1769100118</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>9a9f3ac09fec32107f4424482024ab95</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d939110000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Create Incident Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>cd6e7200bdec3210a96f3c8e50f47a59</update_guid>
+<update_guid_history>cd6e7200bdec3210a96f3c8e50f47a59:-1769100118,70b6f56fe7d47210e9e720d3e1fea223:-1769100118,4e80dcabcf183210120ece17fc526929:176866027,173ce79346d03210d6cb69e87c8de0d4:304094248,5ea62c560454321066faaa64db8d7bfc:-1054127430,0fcaad7985d03210656908e8dafd6121:13970004</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_10ef3de39f5872107f4424482024ab5f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><context/><conversation display_value="Created 2025-10-06 09:34:17">14ef3de39f5872107f4424482024ab80</conversation><objective>id 266,463</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 09:34:17</sys_created_on><sys_domain>global</sys_domain><sys_id>10ef3de39f5872107f4424482024ab5f</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 09:35:12</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>193490012</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>9a9f3ac09fec32107f4424482024ab98</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7d6c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>10ef3de39f5872107f4424482024ab5f</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>d9fefe4079ec321011c789a861172b95</update_guid>
+<update_guid_history>d9fefe4079ec321011c789a861172b95:193490012</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>x_snc_pepsico_de_0_delivery_delay_90c3d81a9f9032107f4424482024abae</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_pepsico_de_0_delivery_delay"><x_snc_pepsico_de_0_delivery_delay action="INSERT_OR_UPDATE"><assigned_to/><calculated_impact>Option 1 - $1166.67
+Option 2 - $633.33
+Option 3 - $1545.83</calculated_impact><chosen_option>{"option_id": "opt-2", "route_number": 14, "distance_miles": 109, "eta_minutes": 332}</chosen_option><customer_id>1</customer_id><incident_sys_id>38c4aceb9fd832107f4424482024ab69</incident_sys_id><number>DEL0001008</number><problem_description>Breakdown at I-80 MM 143 (engine)</problem_description><proposed_routes>[{"option_id": "opt-1", "route_number": 6, "distance_miles": 122, "eta_minutes": 460}, {"option_id": "opt-2", "route_number": 14, "distance_miles": 109, "eta_minutes": 332}, {"option_id": "opt-3", "route_number": 8, "distance_miles": 152, "eta_minutes": 551}]</proposed_routes><route_id>717885</route_id><status>dispatched</status><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-02 04:29:29</sys_created_on><sys_id>90c3d81a9f9032107f4424482024abae</sys_id><sys_mod_count>4</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-07 22:32:02</sys_updated_on><truck_id>7923</truck_id></x_snc_pepsico_de_0_delivery_delay></record_update>]]></payload>
+<payload_hash>-418825670</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>9a9f3ac09fec32107f4424482024ab9b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1dc18170000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>DEL0001008</target_name>
+<type>Delivery Delay</type>
+<update_domain>global</update_domain>
+<update_guid>cf1f368088ec3210b3231b1e60450178</update_guid>
+<update_guid_history>cf1f368088ec3210b3231b1e60450178:-418825670</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>incident_c52afe449fac32107f4424482024ab7e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="incident"><incident action="INSERT_OR_UPDATE"><active>true</active><activity_due>2025-10-08 05:05:48</activity_due><additional_assignee_list/><approval>not requested</approval><approval_history/><approval_set/><assigned_to display_value="Virtual Agent">98e75f443d8522107f4488addddbe292</assigned_to><assignment_group/><business_duration/><business_impact/><business_service/><business_stc/><calendar_duration/><calendar_stc/><caller_id/><category>inquiry</category><cause/><caused_by/><child_incidents>0</child_incidents><close_code/><close_notes/><closed_at/><closed_by/><cmdb_ci/><comments/><comments_and_work_notes/><company/><contact_type/><contract/><correlation_display/><correlation_id/><delivery_plan/><delivery_task/><description>Issue: Breakdown at I-75 MM 89 (engine) </description><due_date/><escalation>0</escalation><expected_start/><follow_up/><group_list/><hold_reason/><impact>1</impact><incident_state>2</incident_state><knowledge>false</knowledge><location/><made_sla>true</made_sla><notify>1</notify><number>INC0010141</number><opened_at>2025-10-08 03:05:48</opened_at><opened_by display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</opened_by><order/><origin_id/><origin_table/><parent/><parent_incident/><priority>1</priority><problem_id/><reassignment_count>0</reassignment_count><rejection_goto/><reopen_count>0</reopen_count><reopened_by/><reopened_time/><resolved_at/><resolved_by/><rfc/><route_reason/><service_offering/><severity>3</severity><short_description>Whole Foods Truck 8098 Route 316661</short_description><skills/><sla_due/><sn_esign_document/><sn_esign_esignature_configuration/><state>2</state><subcategory/><sys_class_name>incident</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-08 03:05:48</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c52afe449fac32107f4424482024ab7e</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:05:48</sys_updated_on><task_effective_number>INC0010141</task_effective_number><time_worked/><universal_request/><upon_approval>proceed</upon_approval><upon_reject>cancel</upon_reject><urgency>1</urgency><user_input/><variables/><watch_list/><wf_activity/><work_end/><work_notes/><work_notes_list/><work_start/></incident></record_update>]]></payload>
+<payload_hash>-548274666</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>9e9f3ac09fec32107f4424482024ab94</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1dd1d1b0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>INC0010141</target_name>
+<type>Incident</type>
+<update_domain>global</update_domain>
+<update_guid>9b5ffe80b4ec321035b7e85849b6be35</update_guid>
+<update_guid_history>9b5ffe80b4ec321035b7e85849b6be35:-548274666</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_040a9c639f9832107f4424482024abd2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 02:09:10">800a10a39f9832107f4424482024ab31</conversation><objective>266,463</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 02:09:10</sys_created_on><sys_domain>global</sys_domain><sys_id>040a9c639f9832107f4424482024abd2</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 02:09:41</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>597829436</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>9e9f3ac09fec32107f4424482024ab97</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7cbe0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>040a9c639f9832107f4424482024abd2</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>9dfe7e40c4ec3210a34471f45d8b9890</update_guid>
+<update_guid_history>9dfe7e40c4ec3210a34471f45d8b9890:597829436</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_40dc5f4a9f0832107f4424482024abfb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">a4eb7e2d9f4032107f4424482024ab1b</agent><context/><conversation display_value="Created 2025-09-19 14:13:45">1cdc178a9f0832107f4424482024abe5</conversation><objective>help me resolve INC0010082</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-19 14:13:44</sys_created_on><sys_domain>global</sys_domain><sys_id>40dc5f4a9f0832107f4424482024abfb</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 14:14:30</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>471463891</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>9e9f3ac09fec32107f4424482024ab9a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db81ad0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>40dc5f4a9f0832107f4424482024abfb</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>b5fefe40d1ec3210d36af993d9519ed0</update_guid>
+<update_guid_history>b5fefe40d1ec3210d36af993d9519ed0:471463891,52d97116b9083210e765e49873c8398a:471463891</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_4e077ca79f9c32107f4424482024ab9b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Decision Agent">bea5ec6f9fd832107f4424482024abae</agent><description>Updates an incident record on the incident table</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"incident_sys_id","value":"","description":"sys id of an incident record","invalidMessage":null},{"name":"impact","value":"","description":"value determined by the AI agent","invalidMessage":null},{"name":"urgency","value":"","description":"value determined by the AI agent","invalidMessage":null},{"name":"crudInputs","value":{"operation":"update","table":{"value":"incident","displayValue":"Incident"},"query":"sys_id={{incident_sys_id}}","fieldValues":[{"field":{"id":"impact","sublabel":"impact","label":"Impact","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"{{impact}}"}},{"field":{"id":"urgency","sublabel":"urgency","label":"Urgency","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},"value":{"fieldValue":"{{urgency}}"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Update Incident Tool</name><output_transformation_strategy>paraphrase</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 04:16:01</sys_created_on><sys_domain>global</sys_domain><sys_id>4e077ca79f9c32107f4424482024ab9b</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Update Incident Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_4e077ca79f9c32107f4424482024ab9b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 02:52:02</sys_updated_on><tool display_value="Update Incident Tool">c6077ca79f9c32107f4424482024ab99</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>464827678</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>d29f3ac09fec32107f4424482024ab96</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d9b5140000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Update Incident Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>708e3e000bec3210d1090e04e760394c</update_guid>
+<update_guid_history>708e3e000bec3210d1090e04e760394c:464827678,e3f6364c0e6c32102dcb0cc65bdd2ae3:464827678,e192c2ab5e5872103dcaf7ed40f660d5:676364097,423f35a35d58721035dc9d07be3d259e:404529336,46077ca74f9c3210f96ceda5c13d289e:1592502274</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_193040e39f9432107f4424482024ab64</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 00:16:31">bd3040e39f9432107f4424482024abd4</conversation><objective>258,694	</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 00:16:29</sys_created_on><sys_domain>global</sys_domain><sys_id>193040e39f9432107f4424482024ab64</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 00:17:40</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-1423578762</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>d29f3ac09fec32107f4424482024ab99</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7e060000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>193040e39f9432107f4424482024ab64</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>a1fefe4080ec3210bb45208e7db7fe9b</update_guid>
+<update_guid_history>a1fefe4080ec3210bb45208e7db7fe9b:-1423578762</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_f89165359f9032107f4424482024ab40</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent"><sn_aia_agent action="INSERT_OR_UPDATE"><description>Analyze financial impact of delivery disruptions and create incident tracking</description><instructions>Step 1: Use the Lookup Delivery Delay Record Tool with the route id the user entered. If no route id is provided, find the earliest created record with status pending. Retrieve its eta_minutes values for each proposed route.
+
+Step 2: Find the supply agreement record for the customer id on the delivery delay record. Retrieve the fields deliver_window_hours and stockout_penalty_rate. 
+
+Step 3: For each ETA value retrieved from the delivery delay record, call the Calculated Impacts Tool separately.
+Do NOT pass an array or comma-separated list of ETA values. 
+Instead, call the tool once per ETA (one value at a time). 
+After each call, collect the returned values and combine them into a single JSON object that you store in memory as calculated_impact, in the format:
+Option 1 - $X.XX
+Option 2 - $Y.YY
+Option 3 - $Z.ZZ
+
+Step 4: Present the calculated_impact JSON object to the user for confirmation. THE USER MUST CONFIRM BEFORE YOU USE the Create Incident Tool.
+
+Step 5: Once the user confirms, use the Create Incident Tool with the details from the delivery delay record. Store the incident sys_id in memory.
+
+Step 6: Use the route_id to find and update the delivery delay record with the calculated_impact JSON object and incident sys_id.
+
+Step 7: Thank the user.</instructions><internal_name>global.x_snc_pepsico_de_0.Route Financial Analysis Agent</internal_name><name>Route Financial Analysis Agent</name><proficiency>- The AGENT is proficient in analyzing delivery delays by examining route IDs and ETA values, calculating the financial impact of alternate routes, and updating records with these calculated impacts. This expertise allows the AGENT to effectively manage logistics and minimize costs associated with delivery delays.
+- The AGENT utilizes the Lookup Delivery Delay Record Tool to access delivery delay records, extracting ETA values for proposed routes. This capability enables the AGENT to gather foundational data required for calculating impacts and making informed decisions.
+- The AGENT employs the Calculated Impacts Tool to individually assess each ETA value, calculating the financial impact in terms of options with specific monetary values. This capability allows the AGENT to present detailed cost analyses for user confirmation.
+- The AGENT uses the Create Incident Tool to generate incident records based on delivery delay details, storing the incident sys_id for future reference. This capability ensures that all delivery-related problems are formally documented and can be addressed systematically.
+- The AGENT updates delivery delay records with the calculated impact JSON object and incident sys_id, ensuring that all relevant information is captured and accessible for future reference. This capability supports effective record-keeping and decision-making processes.</proficiency><record_type>custom</record_type><role>You analyze delivery delays, calculate the cost of alternate routes, create incident records, and update records with calculated impacts.</role><run_as/><strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy><sys_class_name>sn_aia_agent</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-30 21:01:06</sys_created_on><sys_domain>global</sys_domain><sys_id>f89165359f9032107f4424482024ab40</sys_id><sys_mod_count>201</sys_mod_count><sys_name>Route Financial Analysis Agent</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_f89165359f9032107f4424482024ab40</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 10:26:14</sys_updated_on></sn_aia_agent></record_update>]]></payload>
+<payload_hash>-1286549870</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>d69f3ac09fec32107f4424482024ab95</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d8ad940000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Route Financial Analysis Agent</target_name>
+<type>AI Agent</type>
+<update_domain>global</update_domain>
+<update_guid>544e3eccf5ac3210abfd66cfc13a6eb0</update_guid>
+<update_guid_history>544e3eccf5ac3210abfd66cfc13a6eb0:-1286549870,9dcbc6a3bbd87210fb94c3ae4246e00f:-1286549870,a25b066312d87210bed41c6499f2a556:-619905165,415b8a23dbd87210a1ccf5d2a771feb8:-1187466359,e1aac6ef6198721096c7320358ae43cd:-114560464,5caac6efcc9872102ac4a81037b45e8b:-2004521934,b7f90e6f31987210d144a14fe11c9fd9:-196272477,faf98e2f4b987210419fe2cf94dda0ad:-1764591554,8f09c2eba29872109e26a91c08306c8d:1695742151,a5098eabfa987210d486391a7759f5a5:-1750354946,6a9842ab8498721017a8f47b70bb21f2:1793287062,5d984e6b01987210a5121388f2ce64b9:-1526181867,cff78a2b68987210e9fb9d9fb1b454b9:362944340,79f7c62b9a9872108f9b2a11f8906918:579518610,6c768e272a98721003226895aba49f82:-139353416,9b668e271d98721029126caae88a4654:111379523,ae49f127d2187210a0b75028cdcc8a2e:1834671168,c949bde35e187210ad6a988f48992624:-1990752390,5f27f9aff2d47210328485bd13127dad:782341350,9f27b9afa0d472107bead08cfdd0c779:-980773554,3e27b9af3fd47210f0e889c72f938a6e:-430989973,b4c6b96ff4d47210e5274cb257e664d2:373808083,7fb6396f22d4721038f2ecf1dc0d4929:-433234714,d7b6796fe9d47210e481726c8ae56da8:-1505387351,1bb6396f67d4721006eae99e82414c22:1392725074,7a663d2fd8d47210e5f9007a178d5862:-943369782,2966392fdad47210a2cc605456714a78:-1632755459,064d94ab3a983210fd7b3aafd5f1c028:-1506326205,9ee95c63f2983210bfbf1e3de6dbc37c:-1063083566,01e91c63ca98321043a62007e641145f:-933975017,1a89dc232e98321010517ea1e54c5640:1515040022,788990232c9832108a1967bf5290a442:357748161,a80958ef115832102805e2587522e221:-2015759959,97f858ef155832108a9a05d7c70f8e0c:1297156874,3f8854afd558321089c8737a9d2fdec3:-1729468601,4e8810af0358321075b1518de003777c:-2131162503,fdc650ab875832108bdee3e43999d495:957332611,a0c6dc6b4f58321072a2736fe6753994:1256498898,2cc518e7a9583210f2fcd953f195c563:13417547,dbb510e73658321085976acfad3ef8cc:-1023862217,3d9550e7c75832108fbe5b1b0314c6ee:995826148,33b4dc27565832102e647cc14391c9ef:105942381,02b41c27a858321026109df62702b00c:-1754106643,f5d190af2718321057ecd23159809f48:1301378860,61d098eb94183210b8c00476bc59c76c:1148013436,4cd0d4ebe11832102ea9ea09658560d4:952355537,1b8010eb7f18321022422f1e89b7ff15:-488886603,5b80dcabc7183210191d8ef586734678:1076834237,6a109c6b531832109d7a4fa82dbbe3ce:790675759,8d10946b23183210bcccf17a4c3fc410:-1196099597,c3a940ab9ad43210d20d3cd0d7b2334b:335421975,f1a9446b26d432103239044b1468a90f:1023380286,c1d8002bffd432107df0e726151339d7:-1773293520,9fc8002b41d432100b51fd34800db12f:791392653,b5c844e7e6d4321072f35424db2dc8fa:-1237323237,7d580ca71fd43210b524e9c7f10d1395:-1102990257,945844a713d43210a232018b43cb568c:1987087374,5ae7886755d432107075cc4d604cb846:260525308,d5e7c46715d432101d65a538decf574d:-1472703695,2dc704673bd4321049dc1ef1e235cdd4:-669264314,04b5c023eed432108639c6aa48ce6ee9:936063270,56a58023c9d432106a55162d262fb0b3:649280448,1983ccab089432102c0eb740310dd8cc:-307503740,088388aba69432108cc42c855458ea10:1019073314,d47180a7a7943210d4d7c22a4bba2bb7:1299088559,82ef739375943210965e0bd75db5b644:73891931,516d3fdb2f543210f29e66f1575c9fc3:856626524,406dfbdbec5432109b8f20bf592dc3f4:-940646689,ee5d3f9b7554321037077586491f685c:-821524794,464c335b9554321013686d06d4265cf8:1974590915,f84c335b095432109b10ed5df8d75e3e:-1904032456,bf5b3f97e054321031f7171ac6d34823:-54500489,c65b3f97c7543210dd2e4221b9bf7401:1007960028,806a7717f05432104fff1340e70b1498:149171593,fb5ab717015432100fd6c85969d82127:1610738220,8e4ab317cd543210b48f6fee2bc3159a:-1267202662,804a73171d543210731f444584fd4c40:672096387,f23a33174e5432106029d4a0b205325e:-2020865345,2a293b536b5432109e7e9f8e5bd6c018:-324931186,fda8b31369543210d70b7278fdea5369:1834854550,11a8b3137e543210556cb18df7a7d727:1717499011,81a8b313175432105bfa995742968a33:24698619,80a87313cb5432102f3342fd2ae8b601:497271295,529833136254321084ba25255cbd6280:1091829838,0a5f239b8fd032104e55c484c3a964f7:1904616115,a32fab5b9cd03210166bc1ffc7eeadb1:-947321950,1a2fe35ba0d03210d756083672fc86f0:562898032,7d4c2b930bd032106fe2190d6b27d8f3:-983589340,784c6b9387d03210e7eb9ec370b3f920:1138631103,6c4ce79396d0321036a3d9f1ab900aff:271124924,e84c2b93b4d03210da43628f2e36a6e3:537392436,684ce79335d032103c47540fc61763af:-85509542,d93ca39363d032109d15ec2f4bd283fc:597849863,af2490e276903210601892592d9f9730:574014491,eb2490e2e29032101d56a68f811682e6:1942713422,132490e2b2903210a39fb9a190d46325:-1275635531,f7149ca283903210f34bf72d598660bb:472706393,604af496f1183210dc317e8a10af581a:803144833,c61a709614183210dfb36039e6ca0e76:895975303,981a70964418321032ee45966f21063b:184711238,05d9f05664183210d85908330b264e2f:65230068,33c934164d183210bc0f19cfe07f82fe:1827031364,6f1974d22c183210c2b13ff5395a93ef:-515074322,d9c7b0125b183210717d15efafa97d47:1788178743,c8e6bc5ef6d43210d8a754c8f55662fa:-1264372796,fad6305e7cd4321012debb4f5a78cd85:-1450452630,2726301ea0d4321002bc9fe33d55f1db:-1319959611,f12630dabad43210a5cd3aee59fbdc92:1358242672,18a5f89a96d432106286dc5e798dd904:-330952414,ae95b05addd4321035ba3991285d98eb:-1440386819,5684301a91d43210387f0f25233b92e4:171124233,8284301ac2d432100c010b9e728e4fd9:1608297569,0664f8d68dd432105482793335e47b78:-120744088,e064f8d6cdd43210a899bb6981ff7148:1590628394,74c27cd2e4d43210e6cce3a3548894dc:12752476,88c27cd29fd4321033ed9cf2b85534cf:-107214940,431230927ed4321059c148b2f6de46d5:-1196327717,8d123092f5d432100f9df6f6824c16b7:1644720267,5a61f412d4d4321020543532b4ec4338:577799124,6961b41263d43210c47ae9e223666332:963221735,ae30705ef9943210b33189468800d3cc:1452433890,4930705e66943210bc1511c3d7418693:1168433655,dd10f81e5a9432106d757150f7c0af8a:-1328921864,39eeac5a2b9432101597ba600f11ce08:-1731267540,b3de2c5a889432100281172ac6888cd2:-2067025953,eb5de096e9943210c8f861328fb3b585:553176856,323bec125b943210b0ec311b8dd246ba:1147875871,053b6cde02543210f5edab242e21b115:291132908,625a2c9e5554321094ded78554e295cb:940012357,273ae49eac543210731b8227e6e51ca2:-615695469,823a2c1eee54321056ee9c4400b2a5df:-2032411973,0909e4da345432104a42721f1688d5ec:-2144397331,97f8e85a995432105a3fe08e55541532:2053891412,1518e05ac7543210c2c0efc2d321c2a4:1912264121,ab08641a7054321014b81379c7ffdf79:550168748,b227ac96925432105415e34adae3ffe2:995453951,49276c56a2543210faa94f3e5d7cdd05:1958246330,d4b66c56a85432108921d5891e5f2683:1885497481,fd66e056af543210921714acf610273e:2032803595,8466e4d2e7543210f8154a2c4920f9db:1108599966,83d5ecd2765432109b05189e9bbd466c:-1804341307,2744e012af54321017be797475f65b59:1564772511,b14460de3c143210217623786f4ab463:709483018,2032e0daf514321020baa4c87492f9dd:219649006,d5e1e49a7e143210bb8a511e3539fd1f:-724299998,dfd1e81a0e14321082401a526e867bf6:-1699607774,8ea024d69f1432106d9b1f176af2ee60:955281377,88a0a0d6b8143210eb51017c769cf5dd:-1044608688,86c25496fd903210f6874a1eb52fc4a2:887757946,f3b2dc16ca903210a0788dcc29cc4fe3:-1036666593,df625856a19032106e50f59608669e82:495145600,5eeec05e8e5032108182caa92681966c:-864396777,7ceec49a1950321040ef41a4b158f174:-650324202,15ac4cd60c503210f8e92e649dce0eff:-1305992595,b79c4cd6575032106ec14169e6d94dad:-1980162375,146b4c16b95032106df67c4811b395ce:-1346417321,625b8016e75032106b023d3109358acf:-571846740,4b58cc5e611032106447ca4423514c7d:-694694171,d95888da161032109ffe962504a46f01:647791841,5e4704dae9103210840737df12f4cb21:324501922,7237009a59103210f18229887661917f:-1169910659,67358fb9f31072103ed1ab86607b3c4d:-371016870,3d350bb97e1072101c47f7ad4f1895c7:-1628706957,b9e103f12f1072100cf97a101e308e41:-190308025,e7d103b1a2107210cb9bfdb79d3da807:1899271387,90feb23df0dc32100d5cede6f06d4d35:-733079224,eaee723de7dc32103c74adb93b1607ed:208128479,1f3d7239d0dc3210df8f1428b79635f6:1778927463,3c3d7af595dc321035f6c84f9188c23b:-774119897,7478327d129c3210bcb99e8323739087:995468828,b668b63d119c3210e32792801e0c3e8a:-338520075,56253675269c32102c416f2365747897:1379026628,5025b275329c32106280002c3cd53fbe:2028531865,b1847ef1339c3210438b3ae4460a2c32:1063858828,09643af13c9c32107ce143b60f961eb1:-2015530406,9e3432f1ad9c3210fb893a916aa21868:-629793028,3c34b6b18b9c3210428d10789a310737:2129351395,6123f631b49c3210ddb4a66ff90af80e:1563025893,6f133631329c32106eff199416be3148:538156740,e2523abdf25c32109aa7777d35170cd6:-186737032,785236bd145c3210a245d11567aaf9e5:218109553,35eca2b14c5c321018c4edf57013e79b:447158715,37dc62b1ea5c3210dd700caf5b0451c6:1749480428,436766754b1c3210d8936a8334379cf1:96369524,dd67e275a51c32104c4ca6728d280b29:645294582,cd072635531c3210bdadd7624f757b83:1612089143,c7e62235bd1c321093f7128674d85efe:2133951226,59e6e6f1431c3210a8c951a102596aae:250056433,62317579af143210dd670c4c466f8e5a:-1258011037,657f6175151432106a0d3e0120e4dedc:1913888042,847fa935ee1432103ffd1db950647ee4:-265543255,1d0ee97144143210e45bbc1d4b72c025:-1150456177,87bded31d7143210ef4ba38d629ab6ae:177708858,c5bded3128143210c3c883727f284d74:625008853,145b61f9dcd032107c6c170a913de483:-535311311,473badb9f1d032108364d75ba7153781:116466815,a03be1b96ed03210f7cca1a799aed063:-20259764,f2daed79f4d03210bda8177229a06c7c:48722349,75daad7903d0321092065dc8d11949b7:-795782340,85daad79a2d03210b9d8819ce9351794:187126105,4ddaed79b9d03210ac6ad03405bce546:817865203,ed9321791d9032109076227aa6c9ea53:-1706841806,6283ad3983903210269bad5c25ace40a:1179024926</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_0a62515a9f8032107f4424482024ab1f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">a4eb7e2d9f4032107f4424482024ab1b</agent><context/><conversation display_value="Created 2025-09-19 22:47:33">aa629d1a9f8032107f4424482024abf4</conversation><objective>help me resolve incident INC0010086</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-19 22:47:31</sys_created_on><sys_domain>global</sys_domain><sys_id>0a62515a9f8032107f4424482024ab1f</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 22:49:43</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-700488985</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>d69f3ac09fec32107f4424482024ab98</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7d390000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>0a62515a9f8032107f4424482024ab1f</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>91fefe40edec3210898bc061e66bc294</update_guid>
+<update_guid_history>91fefe40edec3210898bc061e66bc294:-700488985,dad97116900832105b3de86158c12b62:-700488985</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_usecase_8ea72ba49f9832107f4424482024abd5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase"><sn_aia_usecase action="INSERT_OR_UPDATE"><base_plan>Save the Route ID the user enters to memory, use this Route ID for both agents. 
+
+First use the Route Financial Analysis Agent, then Wait 10 Seconds, finally use the Route Decision Agent.</base_plan><description>This use case detects delivery delays, then uses two agents to asses the financial impact and alternative route options.</description><execution_mode>copilot</execution_mode><internal_name>global.x_snc_pepsico_de_0.Logistics Breakdown Resolution</internal_name><name>Logistics Breakdown Resolution</name><record_type>custom</record_type><sys_class_name>sn_aia_usecase</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-27 09:32:14</sys_created_on><sys_domain>global</sys_domain><sys_id>8ea72ba49f9832107f4424482024abd5</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Logistics Breakdown Resolution</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_usecase_8ea72ba49f9832107f4424482024abd5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-08 03:04:54</sys_updated_on><team display_value="Logistics Breakdown Resolution">1e19e7689f9832107f4424482024aba1</team><version>v1</version></sn_aia_usecase></record_update>]]></payload>
+<payload_hash>1479208010</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>d69f3ac09fec32107f4424482024ab9b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d81fa60000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Logistics Breakdown Resolution</target_name>
+<type>Use case</type>
+<update_domain>global</update_domain>
+<update_guid>671ef2c85aac321078e8272cde9769d6</update_guid>
+<update_guid_history>671ef2c85aac321078e8272cde9769d6:1479208010,c0f9720463ac3210f4de262d9c0eae60:1479208010,89a8724050ac3210510781f446407d9c:383688398,54a6f688046c3210e53e412d69979390:-1482359456,1e19e76836983210489f0faa680efaa6:-203775195</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_037d03019f7722107f4424482024abb1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Categorize ITSM Incident AI Agent">dd3f43fe9f2722107f4424482024ab60</agent><context/><conversation display_value="Created 2025-09-04 00:17:09">d37d47cd9f3722107f4424482024ab95</conversation><objective>categorize INC0010009</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-04 00:17:08</sys_created_on><sys_domain>global</sys_domain><sys_id>037d03019f7722107f4424482024abb1</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-04 00:17:39</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-91339178</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>da9f3ac09fec32107f4424482024ab97</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db7bee0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>037d03019f7722107f4424482024abb1</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>51fe7e4003ec321061e66c90b1bfb88f</update_guid>
+<update_guid_history>51fe7e4003ec321061e66c90b1bfb88f:-91339178</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_3fc598e79f5832107f4424482024ab18</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 01:50:52">ccd598e79f5832107f4424482024abae</conversation><objective>820,110</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 01:50:51</sys_created_on><sys_domain>global</sys_domain><sys_id>3fc598e79f5832107f4424482024ab18</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 01:51:26</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>669795330</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>da9f3ac09fec32107f4424482024ab9a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db81920000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>3fc598e79f5832107f4424482024ab18</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>79fefe401aec32109b0c25a6752770ce</update_guid>
+<update_guid_history>79fefe401aec32109b0c25a6752770ce:669795330</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_8fcaad799fd032107f4424482024ab0c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><description>Finds the delivery delay record for the customer id provided from the supply agreement record or the earliest created record if no route id is provided</description><display_output>true</display_output><execution_mode>autopilot</execution_mode><inputs>[{"name":"route_id","value":"","description":"ID number of customer","invalidMessage":null},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_pepsico_de_0_delivery_delay","displayValue":"Delivery Delay"},"query":"route_id={{route_id}}^ORstatus=pending","returnFields":[{"id":"status","sublabel":"status","label":"status","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"route_id","sublabel":"route_id","label":"route_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"proposed_routes","sublabel":"proposed_routes","label":"proposed_routes","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"problem_description","sublabel":"problem_description","label":"problem_description","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"customer_id","sublabel":"customer_id","label":"customer_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"calculated_impact","sublabel":"calculated_impact","label":"calculated_impact","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"truck_id","sublabel":"truck_id","label":"truck_id","type":"integer","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]},{"id":"incident_sys_id","sublabel":"incident_sys_id","label":"incident_sys_id","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"excludedOperators":[]}],"limit":"1","orderBy":"sys_created_on","sortType":"a_to_z"},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Lookup Delivery Delay Record Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-30 21:32:49</sys_created_on><sys_domain>global</sys_domain><sys_id>8fcaad799fd032107f4424482024ab0c</sys_id><sys_mod_count>16</sys_mod_count><sys_name>Lookup Delivery Delay Record Tool</sys_name><sys_package display_value="PepsiCo Deliveries" source="x_snc_pepsico_de_0">71842f6c9f5832107f4424482024ab3a</sys_package><sys_policy/><sys_scope display_value="PepsiCo Deliveries">71842f6c9f5832107f4424482024ab3a</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_8fcaad799fd032107f4424482024ab0c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 10:26:09</sys_updated_on><tool display_value="Lookup Delivery Delay Record Tool">4bcaad799fd032107f4424482024ab0a</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>906091893</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>de9f3ac09fec32107f4424482024ab96</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1d949fe0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>Lookup Delivery Delay Record Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>4a6e7a00e6ec3210051fa5667810cd30</update_guid>
+<update_guid_history>4a6e7a00e6ec3210051fa5667810cd30:906091893,48cb86a39fd8721024658b06cdb90960:906091893,1527b9afd8d4721023dbe1fd5120822f:-573376458,bcb6f56fc4d47210321bb3bffe7c6318:-1876725323,a84d14abd298321040586b772185b49f:-573376458,9a5a37172e5432109e2e53804e9d279f:-2021884526,b829b753c95432101544067823f774a4:1279264437,639873139e5432108b69b8c3e3ad6ea0:-232632657,3a3ce793e6d03210862d86f23c8e9d26:-126122685,1824dca2f590321070059964b57f24e5:1583021958,723ab496bc1832107f61d2f940a4b2dd:47988369,0e1974d28a183210226dd46977e9c483:128807336,3bb778de40d4321087624876f0b74f4d:-629422649,f484301a59d43210c021a5124512e666:-385552465,52b27cd26ed43210447fb804a559bba1:-29370286,c0843ef1a99c3210efaf49e73c968fb3:1503192017,8a4bedb940d032108e809f35dad2cc7e:-29370286,0fcaad7945d03210c4ccd773a9a42c1b:1769942226</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_21aac6ef9f9872107f4424482024ab94</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="Route Financial Analysis Agent">f89165359f9032107f4424482024ab40</agent><context/><conversation display_value="Created 2025-10-06 10:21:21">7daa0aef9f9872107f4424482024ab70</conversation><objective>help me</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-06 10:21:20</sys_created_on><sys_domain>global</sys_domain><sys_id>21aac6ef9f9872107f4424482024ab94</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-06 10:22:07</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-427673095</payload_hash>
+<remote_update_set display_value="workload_4">169f3ac09fec32107f4424482024ab49</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-10-08 03:29:38</sys_created_on>
+<sys_id>de9f3ac09fec32107f4424482024ab99</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>199c1db80b30000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-10-08 03:29:38</sys_updated_on>
+<table/>
+<target_name>21aac6ef9f9872107f4424482024ab94</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>a5fefe40a5ec321030ddd1d7df5247a2</update_guid>
+<update_guid_history>a5fefe40a5ec321030ddd1d7df5247a2:-427673095</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
