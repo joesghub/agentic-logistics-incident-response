@@ -1,0 +1,204 @@
+{
+  "name": "N8N Delivery Route Data Flow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "c2471702-1e1b-4815-ad00-4e6fe04eb1e5",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a789d4c2-30c3-4500-ba0b-4fbaf634baa2",
+      "name": "Webhook",
+      "webhookId": "c2471702-1e1b-4815-ad00-4e6fe04eb1e5"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Connect to Logistics MCP Client Tool: execute_route – the payload is: \n{\n  \"route_id\": \"{{ $json.body.route_id }}\",\n  \"truck_id\": \"{{ $json.body.truck_id }}\",\n  \"chosen_option\": {\n    \"option_id\": \"{{ $json.body.chosen_option.option_id }}\",\n    \"route_number\": {{ $json.body.chosen_option.route_number }},\n    \"distance_miles\": {{ $json.body.chosen_option.distance_miles }},\n    \"eta_minutes\": {{ $json.body.chosen_option.eta_minutes }}\n  }\n}\n\nConnect to Retail MCP Client Tool: notify_delivery_delay – the payload is: {\n  \"route_id\": \"{{ $json.body.route_id }}\",\n  \"truck_id\": \"{{ $json.body.truck_id }}\",\n  \"chosen_option\": {\n    \"option_id\": \"{{ $json.body.chosen_option.option_id }}\",\n    \"route_number\": {{ $json.body.chosen_option.route_number }},\n    \"distance_miles\": {{ $json.body.chosen_option.distance_miles }},\n    \"eta_minutes\": {{ $json.body.chosen_option.eta_minutes }}\n  }\n}\n\nConnect to ServiceNow MCP Client Tool: update_execution_status – the payload is: {\n  \"route_id\": {{ $json.body.route_id }},\n  \"status\": dispatched\n}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "a1978da6-14fa-43e4-875b-828f50d4181a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "openai.gpt-oss-120b-1:0",
+        "options": {
+          "maxTokensToSample": 1000,
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
+      "typeVersion": 1.1,
+      "position": [
+        80,
+        208
+      ],
+      "id": "438f7eeb-4d29-44e4-bf3e-46fe49c74a05",
+      "name": "AWS Bedrock Chat Model",
+      "credentials": {
+        "aws": {
+          "id": "jF7KFNKiULQMGgFi",
+          "name": "AWS account"
+        }
+      },
+      "notes": "Structured reasoning strength: Excellent at following JSON schemas precisely — crucial for MCP payloads.\n\nDeterministic output: Less prone to non-JSON or free-text responses compared to Titan Text or Mistral.\n\nLow latency: Balanced speed and accuracy for workflow coordination.\n\nContext retention: Handles long multi-step reasoning (like receiving and transforming route data)."
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://34.197.44.143:8000/mcp",
+        "serverTransport": "httpStreamable",
+        "authentication": "bearerAuth",
+        "include": "selected",
+        "includeTools": [
+          "update_execution_status"
+        ],
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.1,
+      "position": [
+        752,
+        240
+      ],
+      "id": "928e7b2b-1893-4686-81f5-96f7e6ff2ae8",
+      "name": "ServiceNow MCP Client",
+      "notesInFlow": false,
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "O8xmspoqLtN6YccP",
+          "name": "Bearer Auth account"
+        }
+      },
+      "notes": "ServiceNow MCP Client"
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://34.197.44.143:8002/mcp",
+        "serverTransport": "httpStreamable",
+        "include": "selected",
+        "includeTools": [
+          "notify_delivery_delay"
+        ],
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.1,
+      "position": [
+        560,
+        256
+      ],
+      "id": "275021d7-12ed-42c6-a824-7f31edcf3804",
+      "name": "Retail MCP Client",
+      "notesInFlow": false,
+      "notes": "Retail MCP Client"
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://34.197.44.143:8001/mcp",
+        "serverTransport": "httpStreamable",
+        "include": "selected",
+        "includeTools": [
+          "execute_route"
+        ],
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.1,
+      "position": [
+        384,
+        256
+      ],
+      "id": "e66cf2ca-6721-46cf-9f90-1bc108ae88ae",
+      "name": "Logistics MCP Client",
+      "notesInFlow": false,
+      "notes": "Logistics MCP Client"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS Bedrock Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "ServiceNow MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retail MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Logistics MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3b9592c3-cc30-4975-88c2-9209744b5287",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0e3529678aa378b2e503845a6febfe867b5bce7e5bf305e1a3036390cdeb8f82"
+  },
+  "id": "qFGKDJeEgofkGnoB",
+  "tags": []
+}

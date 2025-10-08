@@ -1,0 +1,140 @@
+Webhook node: Capture INPUT data (received from ServiceNow)
+
+[
+  {
+    "headers": {
+      "host": "joekn8n.app.n8n.cloud",
+      "user-agent": "ServiceNow/1.0",
+      "content-length": "135",
+      "accept": "application/json",
+      "accept-encoding": "gzip, br",
+      "cdn-loop": "cloudflare; loops=1; subreqs=1",
+      "cf-connecting-ip": "4.223.224.92",
+      "cf-ew-via": "15",
+      "cf-ipcountry": "SE",
+      "cf-ray": "98b271f665d25868-ARN",
+      "cf-visitor": "{\"scheme\":\"https\"}",
+      "cf-worker": "n8n.cloud",
+      "content-type": "application/json",
+      "x-forwarded-for": "4.223.224.92, 104.23.221.66",
+      "x-forwarded-host": "joekn8n.app.n8n.cloud",
+      "x-forwarded-port": "443",
+      "x-forwarded-proto": "https",
+      "x-forwarded-server": "traefik-prod-users-gwc-55-69f456d475-pp26j",
+      "x-is-trusted": "yes",
+      "x-real-ip": "4.223.224.92",
+      "x-snc-integration-source": "158d1433c322a650d7299dcd2b0131b0"
+    },
+    "params": {},
+    "query": {},
+    "body": {
+      "route_id": "603,668",
+      "truck_id": "5748",
+      "chosen_option": {
+        "option_id": "opt-2",
+        "route_number": 10,
+        "distance_miles": 112,
+        "eta_minutes": 449
+      }
+    },
+    "webhookUrl": "https://joekn8n.app.n8n.cloud/webhook-test/c2471702-1e1b-4815-ad00-4e6fe04eb1e5",
+    "executionMode": "test"
+  }
+]
+
+AI Agent node: Capture OUTPUT data (coordination decisions)
+
+AWS Bedrock Chat Model
+[
+{
+"messages": 
+[
+"Human: Connect to Logistics MCP Client Tool: execute_route – the payload is: \n{\n  \"route_id\": \"603,668\",\n  \"truck_id\": \"5748\",\n  \"chosen_option\": {\n    \"option_id\": \"opt-2\",\n    \"route_number\": 10,\n    \"distance_miles\": 112,\n    \"eta_minutes\": 449\n  }\n}\n\nConnect to Retail MCP Client Tool: notify_delivery_delay – the payload is: {\n  \"route_id\": \"603,668\",\n  \"truck_id\": \"5748\",\n  \"chosen_option\": {\n    \"option_id\": \"opt-2\",\n    \"route_number\": 10,\n    \"distance_miles\": 112,\n    \"eta_minutes\": 449\n  }\n}\n\nConnect to ServiceNow MCP Client Tool: update_execution_status – the payload is: {\n  \"route_id\": 603,668,\n  \"status\": dispatched\n}\nAI: [\n  {\n    \"type\": \"reasoning_content\",\n    \"reasoningText\": {\n      \"text\": \"We need to call three functions: execute_route, notify_delivery_delay, update_execution_status. Need correct payload format.\\n\\nFirst payload: route_id is \\\"603,668\\\" string, truck_id \\\"5748\\\", chosen_option with fields.\\n\\nSecond: same.\\n\\nThird: update_execution_status expects route_id string? It says route_id: string. Provided payload has route_id: 603,668 (looks like number with comma). Should be string \\\"603,668\\\". status: dispatched (string). Also maybe need quotes.\\n\\nWe'll call functions sequentially.\\n\\nNow notify_delivery_delay.Now update_execution_status.\"\n    }\n  },\n  {\n    \"type\": \"text\",\n    \"text\": \"All three MCP client tool calls have been executed successfully. Let me know if you need any further actions or updates!\"\n  }\n]\nTool: [{\"type\":\"text\",\"text\":\"{\\n  \\\"ok\\\": true,\\n  \\\"message\\\": \\\"route selected\\\",\\n  \\\"route_id\\\": \\\"603,668\\\",\\n  \\\"truck_id\\\": \\\"5748\\\",\\n  \\\"chosen_option\\\": {\\n    \\\"option_id\\\": \\\"opt-2\\\",\\n    \\\"route_number\\\": 10,\\n    \\\"distance_miles\\\": 112,\\n    \\\"eta_minutes\\\": 449\\n  }\\n}\"}]\nTool: [{\"type\":\"text\",\"text\":\"{\\n  \\\"ok\\\": true,\\n  \\\"notification_id\\\": \\\"d65c9e58-1a91-4bb9-910d-61b59b5dc4b4\\\",\\n  \\\"received_at\\\": \\\"2025-10-08T03:11:54.706005Z\\\",\\n  \\\"route_id\\\": \\\"603,668\\\",\\n  \\\"truck_id\\\": \\\"5748\\\",\\n  \\\"chosen_option\\\": {\\n    \\\"option_id\\\": \\\"opt-2\\\",\\n    \\\"route_number\\\": 10,\\n    \\\"distance_miles\\\": 112,\\n    \\\"eta_minutes\\\": 449\\n  }\\n}\"}]\nTool: [{\"type\":\"text\",\"text\":\"{\\n  \\\"route_id\\\": \\\"603,668\\\",\\n  \\\"updates\\\": [\\n    {\\n      \\\"student_id\\\": \\\"sn-0019\\\",\\n      \\\"instance\\\": \\\"https://kura-labs-jul-4728-0019.lab.service-now.com\\\",\\n      \\\"updated\\\": true,\\n      \\\"status_code\\\": 200,\\n      \\\"sys_id\\\": \\\"9d3a7caf9f9c32107f4424482024ab31\\\",\\n      \\\"error\\\": null\\n    }\\n  ]\\n}\"}]"
+],
+"estimatedTokens": 
+770,
+"options": 
+{
+"lc": 
+1,
+"type": 
+"not_implemented",
+"id": 
+[
+"langchain",
+"chat_models",
+"chat_bedrock_converse",
+"ChatBedrockConverse"
+]
+}
+}
+]
+
+[
+  {
+    "output": [
+      {
+        "type": "reasoning_content",
+        "reasoningText": {
+          "text": "We need to respond to user confirming actions. Provide summary of each tool's response."
+        }
+      },
+      {
+        "type": "text",
+        "text": "All three requests have been processed successfully:\n\n| Tool | Action | Result |\n|------|--------|--------|\n| **Logistics MCP – `execute_route`** | Executed route **603,668** on truck **5748** with option **opt‑2** (route #10, 112 mi, ETA 449 min) | ✅ Route selected |\n| **Retail MCP – `notify_delivery_delay`** | Sent delivery‑delay notification for the same route/truck/option | ✅ Notification recorded (ID: `d65c9e58-1a91-4bb9-910d-61b59b5dc4b4`) |\n| **ServiceNow MCP – `update_execution_status`** | Updated execution status to **dispatched** for route **603,668** | ✅ Status updated in ServiceNow (record `9d3a7caf9f9c32107f4424482024ab31`) |\n\nLet me know if you need any further actions or a status check on these routes."
+      }
+    ]
+  }
+]
+
+Logistics MCP Client: Capture OUTPUT data (communications sent)
+
+[
+{
+"response": 
+[
+{
+"type": 
+"text",
+"text": 
+"{\n  \"ok\": true,\n  \"message\": \"route selected\",\n  \"route_id\": \"603,668\",\n  \"truck_id\": \"5748\",\n  \"chosen_option\": {\n    \"option_id\": \"opt-2\",\n    \"route_number\": 10,\n    \"distance_miles\": 112,\n    \"eta_minutes\": 449\n  }\n}"
+}
+]
+}
+]
+
+
+Retail MCP Client: Capture OUTPUT data (communications sent)
+
+
+[
+{
+"response": 
+[
+{
+"type": 
+"text",
+"text": 
+"{\n  \"ok\": true,\n  \"notification_id\": \"d65c9e58-1a91-4bb9-910d-61b59b5dc4b4\",\n  \"received_at\": \"2025-10-08T03:11:54.706005Z\",\n  \"route_id\": \"603,668\",\n  \"truck_id\": \"5748\",\n  \"chosen_option\": {\n    \"option_id\": \"opt-2\",\n    \"route_number\": 10,\n    \"distance_miles\": 112,\n    \"eta_minutes\": 449\n  }\n}"
+}
+]
+}
+]
+
+
+ServiceNow MCP Client: Capture OUTPUT data (status updates sent)
+
+
+[
+{
+"response": 
+[
+{
+"type": 
+"text",
+"text": 
+"{\n  \"route_id\": \"603,668\",\n  \"updates\": [\n    {\n      \"student_id\": \"sn-0019\",\n      \"instance\": \"https://kura-labs-jul-4728-0019.lab.service-now.com\",\n      \"updated\": true,\n      \"status_code\": 200,\n      \"sys_id\": \"9d3a7caf9f9c32107f4424482024ab31\",\n      \"error\": null\n    }\n  ]\n}"
+}
+]
+}
+]
