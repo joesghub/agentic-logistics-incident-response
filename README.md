@@ -67,6 +67,8 @@ The second table in my system is a Supply Agreement table. It holds the contract
 
 ### Step 3: Use Case and Trigger Setup
 
+#### Logistics Breakdown Resolution Use Case
+
 I set up my use case to utilize one data point across both agents for a consistent experience. I chose the `route_id` because it is a Primary Key in our Delivery Delay records.  
 
 **Description**
@@ -242,7 +244,7 @@ Step 7: Thank the user
 
 The n8n AI agent receives webhook payloads containing routing decisions, coordinates execution with external logistics providers, sends customer notifications, and updates ServiceNow with execution status. The agent constructs appropriate payloads for each external system while maintaining consistent data flow.
 
-#### n8n Workflow Nodes:
+#### n8n Workflow Nodes (All With Successful Executions):
 - Webhook (receives ServiceNow routing decisions)
 ![]()
 
@@ -282,11 +284,9 @@ Evidence of successful end-to-end system operation with specific examples of fin
 ![]()
 
 
-
+### Logistics Breakdown Resolution Use Case Results
 ![]()
 
-
-![]()
 
 ## Business Value
 Analysis of how the system improves PepsiCo's supply chain operations, reduces manual intervention, and optimizes delivery cost management
