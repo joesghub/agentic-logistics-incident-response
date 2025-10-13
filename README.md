@@ -91,6 +91,8 @@ The trigger is configured to run the use case as the assigned user for any creat
 
 ### Step 4: AI Agent Setup
 
+#### Agent 1: Route Financial Analysis Agent
+
 **Role**
 ````
 You analyze delivery delays, calculate the cost of alternate routes, create incident records, and update records with calculated impacts.
@@ -131,45 +133,135 @@ Step 6: Use the route_id to find and update the delivery delay record with the c
 - The AGENT is adept at updating delivery delay records with calculated impacts and incident sys_id, ensuring that all relevant information is accurately recorded and accessible for future reference and decision-making.
 ````
 
+![]()
+
+**Route Financial Analysis Agent Tools:**
+
+| Tool Name | Description | Inputs | Table | Output |
+|-----------------|-----------------|-----------------|-----------------|-----------------|
+| Create Incident Tool    | Creates an incident record on the incident table   | customer_id, customer_name, <br> route_id, truck_id, problem_description   | Incident    | short_description, description, <br> assigned_to, state, impact, <br> urgency    |
+| Supply Agreement Lookup Record Tool   | Finds the supply agreement record for the customer name or id that the user enters.   | customer_name, customer_id   | Supply Agreement    | stockout_penalty_rate, deliver_window_hours, <br> customer_name, customer_id, Sys ID
+| Lookup Delivery Delay Record Tool   | Finds the delivery delay record for the route id that the user enters.   | route_id    | Delivery Delay    | status, route_id, proposed_routes, <br> problem_description, customer_id, calculated_impact, <br> truck_id, incident_sys_id
+| Update Delivery Delay Record Tool  | Updates delivery delay record with calculated impacts  | calculated_impact, route_id, incident_sys_id   | Delivery Delay    | calculated_impact, status, incident_sys_id, assigned_to
+| Calculated Impacts Tool  | Step-by-step calculation for the calculated impact    | eta_minutes, deliver_window_hours, stockout_penalty_rate   | Delivery Delay, Supply Agreement   |   See script below.  |
+
+**Limitations of the AIA ReAct Engine in Numerical Computation**
+
+- The AIA ReAct Engine reasons through language-based steps instead of performing strict numerical computation. 
+
+- It’s optimized for logical reasoning and tool orchestration, not raw arithmetic.
+
+- So sometimes it treats numbers as text or mis-parses values during reasoning and can easily produce math errors.
+
+To avoid this issue we use an isolated calculation script:
+
+````
+(function(inputs) {
+    // Parse numeric inputs safely
+    var etaMinutes = parseFloat(inputs.eta_minutes);
+    var deliveryWindow = parseFloat(inputs.deliver_window_hours);
+    var penaltyRate = parseFloat(inputs.stockout_penalty_rate);
+
+    // Step 1: convert minutes to hours
+    var etaHours = etaMinutes / 60;
+
+    // Step 2: subtract the delivery window
+    var overageHours = etaHours - deliveryWindow;
+
+    // Step 3: multiply by penalty rate
+    var calculatedImpact = overageHours * penaltyRate;
+
+    return {
+        calculated_impact: calculatedImpact.toFixed(2)
+    };
+})(inputs);
+````
+
+#### Agent 2: Route Decision Agent
+
+**Role**
+````
+You analyze route options and their calculated impacts to choose an optimal route based on business rules and cost optimization.
+````
+
+**Description**
+````
+Selects optimal routes and coordinates external communication.
+````
+
+**Instructions**
+````
+Step 1: Use the Lookup Delivery Delay Record Tool with the route id the user entered. Store the route id in permanently in memory as memory.route_id 
+
+Step 2: Analyze the route options and select an option_id that optimizes the corresponding distance_miles and calculated_impact. Store the **entire route object** (including option_id, route_number, distance_miles, and eta_minutes) in your memory as memory.chosen_option, not just the option_id string.
+memory.chosen_option must be a structured JSON object, not plain text.
+
+Step 3: Present the memory.chosen_option JSON object and your reasoning to the user. 
+
+Step 4: Use the Update Delivery Delay Record Tool with:
+- chosen_option = the entire memory.chosen_option JSON object
+- status = approved
+
+Step 5: Use the Update Incident Tool. If the chosen_option is greater than or equal to $1000, update the incident urgency and impact to 1 - High. If the chosen_option is greater than or equal to $500 and less than $1000, update the incident urgency and impact to 2 - Medium. If the chosen_option is less than $500, update the incident urgency and impact to 3 - Low.
+
+Step 6: Use the N8N Delivery Route Data Webhook Tool with memory.route_id.
+
+Step 7: Thank the user
+````
+
+**Proficiency**
+````
+- The agent is proficient in analyzing multiple route options, evaluating their impacts, and selecting the most optimal route based on predefined business rules and cost considerations. This involves a deep understanding of logistics, cost analysis, and decision-making processes.
+- The agent can effectively utilize the Lookup Delivery Delay Record Tool to retrieve and store route information, specifically the route_id, which is critical for initiating the analysis of delivery delays and optimizing route selection.
+- The agent is capable of storing complex route data structures in memory, including option_id, route_number, distance_miles, and eta_minutes, allowing for detailed analysis and informed decision-making.
+- The agent can present detailed JSON objects of chosen route options to users, along with a clear explanation of the reasoning behind the selection, ensuring transparency and user understanding.
+- The agent can utilize the Update Delivery Delay Record Tool to update delivery delay records with the chosen route option and status, ensuring that all records reflect the most current and optimal routing decisions.
+- The agent can employ the Update Incident Tool to modify incident urgency and impact levels based on the financial implications of the chosen route option, ensuring that incidents are prioritized according to their significance.
+- The agent can leverage the N8N Delivery Route Data Webhook Tool to transmit route data to external systems using the stored route_id, facilitating seamless integration and data sharing across platforms.
+- The agent is capable of concluding interactions with users by expressing gratitude, thereby enhancing user experience and fostering positive relationships.
+````
 
 ![]()
 
+**Route Decision Agent Tools:**
+
+| Tool Name | Description | Inputs | Table | Output |
+|-----------------|-----------------|-----------------|-----------------|-----------------|
+| Update Incident Tool    | Updates an incident record on the incident table.   | incident_sys_id, impact, urgency  | Incident    | impact, urgency   
+| Lookup Delivery Delay Record Tool   | Finds the delivery delay record for the route id that the user enters.   | route_id    | Delivery Delay    | status, route_id, proposed_routes, <br> problem_description, customer_id, calculated_impact, <br> truck_id, incident_sys_id
+| Update Delivery Delay Record Tool  | Updates delivery delay record with chosen option.  | chosen_option, route_id   | Delivery Delay    | chosen_option, route_id
+| Calculated Impacts Tool  | ServiceNow server-side script designed to <br> send delivery route data from ServiceNow to <br> an external N8N automation workflow via webhook    | route_id   | Delivery Delay, Supply Agreement   |   [notated-n8n-webhook.js](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/notated-n8n-webhook.js)  |
 
 ![]()
 
+### Step 5: n8n Workflow Setup
 
 ![]()
 
+**n8n Agent Purpose ** 
 
-![]()
+The n8n AI agent receives webhook payloads containing routing decisions, coordinates execution with external logistics providers, sends customer notifications, and updates ServiceNow with execution status. The agent constructs appropriate payloads for each external system while maintaining consistent data flow.
 
-
-![]()
-
-
-![]()
-
-
+#### n8n Workflow Nodes:
+- Webhook (receives ServiceNow routing decisions)
 ![]()
 
-
-
+- AI Agent (coordinates external system calls)
 ![]()
 
-
-![]()
-![]()
-
+- AI Agent Prompt
 ![]()
 
+- AWS Bedrock Chat Model (connected to AI Agent)
 ![]()
+
+- Logistics MCP Client (connects to logistics provider systems)
 ![]()
+
+- Retail MCP Client (connects to customer notification systems)
 ![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+
+- ServiceNow MCP Client (updates execution status back to ServiceNow)
 ![]()
 
 
@@ -181,6 +273,20 @@ Analysis of how you optimized the system for efficiency, reliability, and perfor
 
 ## Testing Results
 Evidence of successful end-to-end system operation with specific examples of financial analysis, routing decisions, and external execution
+
+### Route Financial Analysis Agent Results
+![]()
+
+
+### Route Decision Agent Results
+![]()
+
+
+
+![]()
+
+
+![]()
 
 ## Business Value
 Analysis of how the system improves PepsiCo's supply chain operations, reduces manual intervention, and optimizes delivery cost management
