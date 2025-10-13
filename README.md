@@ -51,7 +51,7 @@ By using AI Agents inside ServiceNow to coordinate incidents and route decisions
 I created a scoped application in ServiceNow Studio with the exact name: **PepsiCo Deliveries**
 
 *This precise naming will auto-generate the scope: x_snc_pepsico_de_0*
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/pepsico_deliveries_scoped_application.png?raw=true)
+![PepsiCO Scoped Application](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/001%20pepsico_deliveries_scoped_application.png?raw=true)
 
 
 ### Step 2: Table Setup
