@@ -41,7 +41,8 @@ By using AI Agents inside ServiceNow to coordinate incidents and route decisions
 | **ServiceNow Workflow (Assigned_To Fix)**                | Auto-assigns records to maintain execution context                                                     | Prevents trigger failures due to permission conflicts                                         |
 | **Webhooks (n8n Integration)**                           | Transfers routing and execution data between systems                                                   | Enables real-time synchronization across AI and logistics systems                             |
 
-
+## Architecture Diagram
+![PEPSICO & SERVICENOW LOGISTICS RESOLUTION AI AGENT FLOW](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/Diagram.png?raw=true)
 
 ## Implementation Steps
 
@@ -311,8 +312,6 @@ The n8n AI agent receives webhook payloads containing routing decisions, coordin
 ![ServiceNow MCP Client Node](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/016%20servicenow_mcp.png?raw=true)
 
 
-## Architecture Diagram
-![PEPSICO & SERVICENOW LOGISTICS RESOLUTION AI AGENT FLOW](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/Diagram.png?raw=true)
 
 ## Optimization
 
