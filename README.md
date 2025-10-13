@@ -39,7 +39,9 @@ The first table in my system is a Delivery Delay table. It holds the information
 
 Schneider's Breakdown Notification Agent sends over the data in the required payload structure using ServiceNow's MCP Server and populates our custom table automatically. 
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/002%20delivery_delay_table.png?raw=true)
+
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/002a%20delivery_delay_table_data.png?raw=true)
 
 The `assigned_to` field in Delivery Delay table serves as the execution context for AI agent triggers. This ensures proper permissions and security boundaries when agents process records automatically.
 
@@ -47,11 +49,13 @@ In this system, our Schneider's Breakdown Notification Agent is unable to proper
 
 However, I used a ServiceNow Workflow to remedy this issue by assigning new records ont he table to System Administrator. 
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/003%20assigned_to_flow.png?raw=true)
 
 #### Supply Agreement Table
 
 The second table in my system is a Supply Agreement table. It holds the contractual penalties for late shipments from Whole Foods (Retail Client).
+
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/004%20supply_agreement_table.png?raw=true)
 
 **Supply Agreement Table Fields:**
 - `customer_id` (Integer, Primary Key)
@@ -64,6 +68,8 @@ The second table in my system is a Supply Agreement table. It holds the contract
 - `stockout_penalty_rate` (Integer) - Cost per hour of delay in dollars
   
 - **`stockout_penalty_rate`**: The financial penalty (in dollars) assessed for every hour a delivery exceeds the contractual delivery window. Whole Foods charges PepsiCo $250 for each hour beyond the 3-hour delivery window. For example, a 5-hour delivery would incur penalties for 2 hours (5 minus 3), resulting in a $500 penalty charge.
+
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/004a%20supply_agreement_table_data.png?raw=true)
 
 ### Step 3: Use Case and Trigger Setup
 
@@ -85,11 +91,11 @@ Step 1: Use the Route Financial Analysis Agent with memory.route_id
 Step 2: Use the Route Decision Agent with memory.route_id
 ````
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/005%20%20use_case_setup.png?raw=true)
 
 The trigger is configured to run the use case as the assigned user for any created or updated delivery delay records with a Status of `pending`.
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/006%20use_case_trigger.png?raw=true)
 
 ### Step 4: AI Agent Setup
 
@@ -135,9 +141,11 @@ Step 6: Use the route_id to find and update the delivery delay record with the c
 - The AGENT is adept at updating delivery delay records with calculated impacts and incident sys_id, ensuring that all relevant information is accurately recorded and accessible for future reference and decision-making.
 ````
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/007%20financial_agent.png?raw=true)
 
 **Route Financial Analysis Agent Tools:**
+
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/008%20fin_agent_tools.png?raw=true)
 
 | Tool Name | Description | Inputs | Table | Output |
 |-----------------|-----------------|-----------------|-----------------|-----------------|
@@ -223,9 +231,11 @@ Step 7: Thank the user
 - The agent is capable of concluding interactions with users by expressing gratitude, thereby enhancing user experience and fostering positive relationships.
 ````
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/009%20route_agent.png?raw=true)
 
 **Route Decision Agent Tools:**
+
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010%20route_agent_tools.png?raw=true)
 
 | Tool Name | Description | Inputs | Table | Output |
 |-----------------|-----------------|-----------------|-----------------|-----------------|
@@ -234,11 +244,10 @@ Step 7: Thank the user
 | Update Delivery Delay Record Tool  | Updates delivery delay record with chosen option.  | chosen_option, route_id   | Delivery Delay    | chosen_option, route_id
 | Calculated Impacts Tool  | ServiceNow server-side script designed to <br> send delivery route data from ServiceNow to <br> an external N8N automation workflow via webhook    | route_id   | Delivery Delay, Supply Agreement   |   [notated-n8n-webhook.js](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/notated-n8n-webhook.js)  |
 
-![]()
 
 ### Step 5: n8n Workflow Setup
 
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010a%20n8n_flow.png?raw=true)
 
 **n8n Agent Purpose ** 
 
@@ -246,25 +255,25 @@ The n8n AI agent receives webhook payloads containing routing decisions, coordin
 
 #### n8n Workflow Nodes (All With Successful Executions):
 - Webhook (receives ServiceNow routing decisions)
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/011%20webhook_node.png?raw=true)
 
 - AI Agent (coordinates external system calls)
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/012%20agent_node.png?raw=true)
 
 - AI Agent Prompt
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/012a%20agent_node_prompt.png?raw=true)
 
 - AWS Bedrock Chat Model (connected to AI Agent)
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/013%20bedrock_node.png?raw=true)
 
 - Logistics MCP Client (connects to logistics provider systems)
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/014%20logistics_mcp.png?raw=true)
 
 - Retail MCP Client (connects to customer notification systems)
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/015%20retail_mcp.png?raw=true)
 
 - ServiceNow MCP Client (updates execution status back to ServiceNow)
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/016%20servicenow_mcp.png?raw=true)
 
 
 ## Architecture Diagram
@@ -277,15 +286,15 @@ Analysis of how you optimized the system for efficiency, reliability, and perfor
 Evidence of successful end-to-end system operation with specific examples of financial analysis, routing decisions, and external execution
 
 ### Route Financial Analysis Agent Results
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/017%20fin_agent_results.png?raw=true)
 
 
 ### Route Decision Agent Results
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/018%20route_agent_results.png?raw=true)
 
 
 ### Logistics Breakdown Resolution Use Case Results
-![]()
+![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/019%20draft%20use%20case.png?raw=true)
 
 
 ## Business Value
