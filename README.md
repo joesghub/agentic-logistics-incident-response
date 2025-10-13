@@ -284,7 +284,7 @@ Step 7: Thank the user
 
 ![n8n Workflow Overview](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010a%20n8n_flow.png?raw=true)
 
-**n8n Agent Purpose ** 
+**n8n Agent Purpose** 
 
 The n8n AI agent receives webhook payloads containing routing decisions, coordinates execution with external logistics providers, sends customer notifications, and updates ServiceNow with execution status. The agent constructs appropriate payloads for each external system while maintaining consistent data flow.
 
