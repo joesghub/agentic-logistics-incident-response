@@ -11,7 +11,6 @@ Description of the automated supply chain incident processing system and its bus
 ## Implementation Steps
 
 
-
 ### Step 1: Application Setup
 
 I created a scoped application in ServiceNow Studio with the exact name: **PepsiCo Deliveries**
@@ -57,15 +56,80 @@ The second table in my system is a Supply Agreement table. It holds the contract
 **Supply Agreement Table Fields:**
 - `customer_id` (Integer, Primary Key)
 - `customer_name` (String, 100)
+
 - `deliver_window_hours` (Integer) - Contractual delivery timeframe
+ 
 - **`deliver_window_hours`**: The contractual timeframe (in hours) within which deliveries must be completed to avoid penalties. For Whole Foods, deliveries must be completed within 3 hours of departure to avoid charges.
+ 
 - `stockout_penalty_rate` (Integer) - Cost per hour of delay in dollars
+  
 - **`stockout_penalty_rate`**: The financial penalty (in dollars) assessed for every hour a delivery exceeds the contractual delivery window. Whole Foods charges PepsiCo $250 for each hour beyond the 3-hour delivery window. For example, a 5-hour delivery would incur penalties for 2 hours (5 minus 3), resulting in a $500 penalty charge.
 
+### Step 3: Use Case and Trigger Setup
+
+I set up my use case to utilize one data point across both agents for a consistent experience. I chose the `route_id` because it is a Primary Key in our Delivery Delay records.  
+
+**Description**
+```` 
+This use case detects delivery delays, then uses two agents to asses the financial impact and alternative route options.
+````
+
+**Instructions (Base Plan)**
+````
+Use the route id the user enters for both agents. Store the route id in permanently in memory as memory.route_id 
+
+Step 1: Use the Route Financial Analysis Agent with memory.route_id 
+
+Step 2: Use the Route Decision Agent with memory.route_id
+````
+
 ![]()
 
+The trigger is configured to run the use case as the assigned user for any created or updated delivery delay records with a Status of `pending`.
 
 ![]()
+
+### Step 4: AI Agent Setup
+
+**Role**
+````
+You analyze delivery delays, calculate the cost of alternate routes, create incident records, and update records with calculated impacts.
+````
+
+**Description**
+````
+Analyze financial impact of delivery disruptions and create incident tracking
+````
+
+**Instructions**
+````
+Step 1: Use the Lookup Delivery Delay Record Tool with the route id the user entered. Retrieve its eta_minutes values for each proposed route.
+
+Step 2: Find the supply agreement record for the customer id on the delivery delay record. Retrieve the fields deliver_window_hours and stockout_penalty_rate. 
+
+Step 3: For each ETA value retrieved from the delivery delay record, call the Calculated Impacts Tool separately.
+Do NOT pass an array or comma-separated list of ETA values. 
+Instead, call the tool once per ETA (one value at a time). 
+After each call, collect the returned values and combine them into a single JSON object that you store in memory as calculated_impact, in the format:
+Option 1 - $X.XX
+Option 2 - $Y.YY
+Option 3 - $Z.ZZ
+
+Step 4: Present the calculated_impact JSON object to the user.
+
+Step 5: Use the Create Incident Tool with the details from the delivery delay record. Store the incident sys_id in memory.
+
+Step 6: Use the route_id to find and update the delivery delay record with the calculated_impact JSON object and incident sys_id.
+````
+
+**Proficiency**
+````
+- The AGENT is proficient in analyzing delivery delays and calculating the financial impact of alternate routes, ensuring that the most cost-effective and timely delivery options are chosen. This involves a deep understanding of logistics and supply chain management.
+- The AGENT can effectively use the Lookup Delivery Delay Record Tool to retrieve estimated time of arrival (ETA) values for various routes, enabling the analysis of potential delays and their impacts on delivery schedules.
+- The AGENT is capable of using the Calculated Impacts Tool to assess the financial impact of delivery delays, calculating options for cost implications based on ETA values, and compiling these into a comprehensive JSON object for user presentation.
+- The AGENT can utilize the Create Incident Tool to generate incident records, capturing essential details such as customer ID, route ID, and problem description, thereby facilitating effective incident management and resolution.
+- The AGENT is adept at updating delivery delay records with calculated impacts and incident sys_id, ensuring that all relevant information is accurately recorded and accessible for future reference and decision-making.
+````
 
 
 ![]()
