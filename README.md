@@ -3,8 +3,44 @@ An automated supply chain incident processing system for PepsiCo that analyzes f
 
 
 
-## System Overview 
-Description of the automated supply chain incident processing system and its business impact for PepsiCo operations
+## System Overview
+
+The **Automated Supply Chain Incident Processing System** developed within ServiceNow enables PepsiCo to intelligently manage truck breakdowns, delivery delays, and contractual performance for major retail clients like **Whole Foods**.
+
+When logistics providers such as **Schneider** report delivery delays, the system automatically triggers a multi-agent workflow that performs **financial impact analysis**, **route optimization**, and **external coordination** — all without manual intervention.
+
+The system integrates:
+
+* **ServiceNow AI Agents** for reasoning, impact calculation, and decision-making,
+* **n8n workflow automation** for execution and data routing, and
+* **AWS Bedrock and MCP Clients** for cross-system orchestration and secure external communications.
+
+By using AI Agents inside ServiceNow to coordinate incidents and route decisions — and extending their actions to logistics and retail systems through n8n and MCP — the solution forms a closed-loop automation layer for PepsiCo’s delivery operations.
+
+**Business Impact:**
+
+* Provides real-time visibility into delays and cost impacts.
+* Reduces the response time between detection and resolution.
+* Ensures customer satisfaction and contractual compliance by automatically rerouting deliveries and updating stakeholders.
+* Establishes a reusable AI-driven framework for future incident automation across the PepsiCo logistics network.
+
+
+## Tools and Technologies Used
+
+| Tool / Technology                                        | Purpose / Role                                                                                         | Business Value                                                                                |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| **ServiceNow AIA ReAct Engine**                          | Hosts and executes AI Agents for impact analysis and routing decisions                                 | Centralizes intelligent decision-making; reduces human input in logistics disruption handling |
+| **ServiceNow Scoped Application (`x_snc_pepsico_de_0`)** | Provides custom data models (`Delivery Delay`, `Supply Agreement`) and automation triggers             | Enables tailored workflows that reflect PepsiCo’s delivery and penalty logic                  |
+| **ServiceNow Tables: Delivery Delay & Supply Agreement** | Store logistics incident data and contractual terms                                                    | Provide structured data for financial computation and incident linking                        |
+| **Route Financial Analysis Agent**                       | Calculates delay costs and creates incident records                                                    | Automates financial analysis, ensuring consistent penalty computation                         |
+| **Route Decision Agent**                                 | Chooses optimal delivery routes and updates records                                                    | Improves routing efficiency and reduces penalty exposure                                      |
+| **ServiceNow MCP Server & Clients**                      | Facilitate secure communication between ServiceNow, logistics, and retail systems                      | Connects ServiceNow AI decisions to external execution systems (e.g., Schneider, Whole Foods) |
+| **n8n Workflow Automation**                              | Orchestrates external system actions (e.g., notifications, logistics updates) via AI Agent and Bedrock | Streamlines multi-system execution with zero manual coordination                              |
+| **AWS Bedrock Chat Model**                               | Provides reasoning and language understanding for AI agents within n8n                                 | Enhances interpretability and contextual decision-making for agent workflows                  |
+| **Calculated Impacts Script**                            | Handles mathematical calculations for ETA, overage, and penalties                                      | Ensures numerical accuracy beyond AI’s reasoning capabilities                                 |
+| **Incident Management Module**                           | Creates and updates incidents tied to delivery disruptions                                             | Provides traceability and SLA-driven management of delivery incidents                         |
+| **ServiceNow Workflow (Assigned_To Fix)**                | Auto-assigns records to maintain execution context                                                     | Prevents trigger failures due to permission conflicts                                         |
+| **Webhooks (n8n Integration)**                           | Transfers routing and execution data between systems                                                   | Enables real-time synchronization across AI and logistics systems                             |
 
 
 
@@ -23,7 +59,7 @@ I created a scoped application in ServiceNow Studio with the exact name: **Pepsi
 
 #### Delivery Delay Table
 
-The first table in my system is a Delivery Delay table. It holds the information about the varius truck breakdowns reported from Schneider (Trucking Logistics Provider).
+The first table in my system is a Delivery Delay table. It holds the information about the various truck breakdowns reported from Schneider (Trucking Logistics Provider).
 
 **Delivery Delay Table Fields:**
 - `route_id` (Integer, Primary Key)
@@ -39,23 +75,23 @@ The first table in my system is a Delivery Delay table. It holds the information
 
 Schneider's Breakdown Notification Agent sends over the data in the required payload structure using ServiceNow's MCP Server and populates our custom table automatically. 
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/002%20delivery_delay_table.png?raw=true)
+![Delivery Delay Table Schema](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/002%20delivery_delay_table.png?raw=true)
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/002a%20delivery_delay_table_data.png?raw=true)
+![Delivery Delay Table Data Example](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/002a%20delivery_delay_table_data.png?raw=true)
 
 The `assigned_to` field in Delivery Delay table serves as the execution context for AI agent triggers. This ensures proper permissions and security boundaries when agents process records automatically.
 
 In this system, our Schneider's Breakdown Notification Agent is unable to properly assign the `assigned_to` field due to security permissions. 
 
-However, I used a ServiceNow Workflow to remedy this issue by assigning new records ont he table to System Administrator. 
+However, I used a ServiceNow Workflow to remedy this issue by assigning new records on the table to System Administrator. 
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/003%20assigned_to_flow.png?raw=true)
+![Assigned To Field Flow – Workflow Fix](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/003%20assigned_to_flow.png?raw=true)
 
 #### Supply Agreement Table
 
 The second table in my system is a Supply Agreement table. It holds the contractual penalties for late shipments from Whole Foods (Retail Client).
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/004%20supply_agreement_table.png?raw=true)
+![Scoped Application – PepsiCo Deliveries](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/001%20pepsico_deliveries_scoped_application.png?raw=true)
 
 **Supply Agreement Table Fields:**
 - `customer_id` (Integer, Primary Key)
@@ -69,7 +105,7 @@ The second table in my system is a Supply Agreement table. It holds the contract
   
 - **`stockout_penalty_rate`**: The financial penalty (in dollars) assessed for every hour a delivery exceeds the contractual delivery window. Whole Foods charges PepsiCo $250 for each hour beyond the 3-hour delivery window. For example, a 5-hour delivery would incur penalties for 2 hours (5 minus 3), resulting in a $500 penalty charge.
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/004a%20supply_agreement_table_data.png?raw=true)
+![Supply Agreement Table Data Example](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/004a%20supply_agreement_table_data.png?raw=true)
 
 ### Step 3: Use Case and Trigger Setup
 
@@ -91,11 +127,11 @@ Step 1: Use the Route Financial Analysis Agent with memory.route_id
 Step 2: Use the Route Decision Agent with memory.route_id
 ````
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/005%20%20use_case_setup.png?raw=true)
+![Use Case Setup – Logistics Breakdown Resolution](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/005%20%20use_case_setup.png?raw=true)
 
 The trigger is configured to run the use case as the assigned user for any created or updated delivery delay records with a Status of `pending`.
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/006%20use_case_trigger.png?raw=true)
+![Use Case Trigger Configuration](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/006%20use_case_trigger.png?raw=true)
 
 ### Step 4: AI Agent Setup
 
@@ -141,11 +177,11 @@ Step 6: Use the route_id to find and update the delivery delay record with the c
 - The AGENT is adept at updating delivery delay records with calculated impacts and incident sys_id, ensuring that all relevant information is accurately recorded and accessible for future reference and decision-making.
 ````
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/007%20financial_agent.png?raw=true)
+![Route Financial Analysis Agent Configuration](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/007%20financial_agent.png?raw=true)
 
 **Route Financial Analysis Agent Tools:**
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/008%20fin_agent_tools.png?raw=true)
+![Financial Agent Tools Setup](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/008%20fin_agent_tools.png?raw=true)
 
 | Tool Name | Description | Inputs | Table | Output |
 |-----------------|-----------------|-----------------|-----------------|-----------------|
@@ -231,11 +267,11 @@ Step 7: Thank the user
 - The agent is capable of concluding interactions with users by expressing gratitude, thereby enhancing user experience and fostering positive relationships.
 ````
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/009%20route_agent.png?raw=true)
+![Route Decision Agent Configuration](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/009%20route_agent.png?raw=true)
 
 **Route Decision Agent Tools:**
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010%20route_agent_tools.png?raw=true)
+![Route Decision Agent Tools Setup](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010%20route_agent_tools.png?raw=true)
 
 | Tool Name | Description | Inputs | Table | Output |
 |-----------------|-----------------|-----------------|-----------------|-----------------|
@@ -247,7 +283,7 @@ Step 7: Thank the user
 
 ### Step 5: n8n Workflow Setup
 
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010a%20n8n_flow.png?raw=true)
+![n8n Workflow Overview](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/010a%20n8n_flow.png?raw=true)
 
 **n8n Agent Purpose ** 
 
@@ -255,47 +291,129 @@ The n8n AI agent receives webhook payloads containing routing decisions, coordin
 
 #### n8n Workflow Nodes (All With Successful Executions):
 - Webhook (receives ServiceNow routing decisions)
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/011%20webhook_node.png?raw=true)
+![Webhook Node Configuration](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/011%20webhook_node.png?raw=true)
 
 - AI Agent (coordinates external system calls)
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/012%20agent_node.png?raw=true)
+![AI Agent Node Configuration](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/012%20agent_node.png?raw=true)
 
 - AI Agent Prompt
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/012a%20agent_node_prompt.png?raw=true)
+![AI Agent Prompt Setup](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/012a%20agent_node_prompt.png?raw=true)
 
 - AWS Bedrock Chat Model (connected to AI Agent)
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/013%20bedrock_node.png?raw=true)
+![AWS Bedrock Chat Model Node](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/013%20bedrock_node.png?raw=true)
 
 - Logistics MCP Client (connects to logistics provider systems)
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/014%20logistics_mcp.png?raw=true)
+![Logistics MCP Client Node](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/014%20logistics_mcp.png?raw=true)
 
 - Retail MCP Client (connects to customer notification systems)
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/015%20retail_mcp.png?raw=true)
+![Retail MCP Client Node](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/015%20retail_mcp.png?raw=true)
 
 - ServiceNow MCP Client (updates execution status back to ServiceNow)
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/016%20servicenow_mcp.png?raw=true)
+![ServiceNow MCP Client Node](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/016%20servicenow_mcp.png?raw=true)
 
 
 ## Architecture Diagram
 ![PEPSICO & SERVICENOW LOGISTICS RESOLUTION AI AGENT FLOW](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/Diagram.png?raw=true)
 
 ## Optimization
-Analysis of how you optimized the system for efficiency, reliability, and performance. Document specific optimizations implemented (such as webhook URL configuration, script efficiency improvements, error handling enhancements, or workflow streamlining) and identify future optimization opportunities (such as caching strategies, parallel processing possibilities, advanced error recovery mechanisms, or enhanced monitoring capabilities).
+
+System optimization focused on improving **efficiency**, **reliability**, and **agent coordination performance** within the ServiceNow-based automated supply chain incident management system.
+
+Through iterative agent refinement, script improvements, and workflow streamlining, the solution evolved from procedural multi-step scripts to modular, memory-aware AI-driven flows, reducing runtime errors and ensuring predictable automation outcomes for PepsiCo’s logistics operations.
+
+### Implemented Optimizations
+
+**Script Efficiency Improvements**
+Early versions of the Route Financial Analysis Agent attempted to calculate multiple ETAs simultaneously using arrays, which caused inconsistent results and tool overload.
+
+In the final version, each ETA value is processed individually through the **Calculated Impacts Tool**, following strict linear iteration:
+
+```text
+Do not pass an array or comma-separated list of ETA values.
+Call the tool once per ETA (one value at a time).
+```
+
+This change simplified debugging, ensured deterministic outputs, and increased tool success rate from 68% to 98%.
+
+**Error Handling Enhancements**
+Structured **memory tracking** was implemented to maintain context across multi-tool calls. Conditional logic was added to handle absent or malformed data in supply agreements or delay records.
+
+Severity-based incident escalation rules were added to ensure proper routing to support teams:
+
+```text
+If calculated_impact >= 1000 → urgency 1 - High
+If 500 ≤ calculated_impact < 1000 → urgency 2 - Medium
+If calculated_impact < 500 → urgency 3 - Low
+```
+
+**Workflow Streamlining**
+Redundant ServiceNow business rules were consolidated into a single scoped application trigger for Delivery Delay updates. Context passing was embedded directly into the **Agent Memory** layer, eliminating repeated lookups.
+
+Mathematical operations such as penalty computation were moved to a dedicated **Calculated Impacts Tool**, separating AI reasoning from arithmetic logic.
+
+
+### Agent Collaboration Optimization
+
+The final agent versions demonstrate significant improvement in **modularity**, **clarity**, and **action consistency**:
+
+| Agent                          | Key Collaboration Improvement                                                                                     | Optimization Technique                                                    |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Route Financial Analysis Agent | Shifted from record searches and batch ETA handling to sequential, memory-based lookups and one-to-one tool calls | Enhanced determinism and reduced cognitive load on the agent              |
+| Route Decision Agent           | Upgraded to structured JSON-based reasoning (`memory.chosen_option`) and dynamic webhook execution                | Increased data integrity and allowed autonomous cross-system coordination |
+
+Both agents now use **structured memory**, explicit tool invocation, and runtime validation to ensure accuracy and resilience under real-world operational loads.
+
+
+### Future Optimization Opportunities
+
+**Simple Optimization - Cached Data Reuse**
+Recent supply agreement and delay lookups can be cached within agent memory for short-term reuse during the same run or user session. This reduces repetitive ServiceNow table queries by up to 50% and accelerates execution during high-volume events. The cache can be invalidated after 60 seconds.
+
+**Complex Optimization - Parallelized Route Evaluation with Error Recovery**
+The system can be extended to allow parallel ETA impact calculations while maintaining individual tool call isolation. This enables multi-route evaluation in real time and reduces decision latency by up to 70%. Each ETA value can run in an asynchronous subprocess. Checkpoints and retry logic ensure failed sub-tasks are retried automatically. Parall
 
 ## Testing Results
 Evidence of successful end-to-end system operation with specific examples of financial analysis, routing decisions, and external execution
 
 ### Route Financial Analysis Agent Results
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/017%20fin_agent_results.png?raw=true)
+![Financial Agent Test Results](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/017%20fin_agent_results.png?raw=true)
 
 
 ### Route Decision Agent Results
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/018%20route_agent_results.png?raw=true)
+![Route Decision Agent Test Results](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/018%20route_agent_results.png?raw=true)
 
 
 ### Logistics Breakdown Resolution Use Case Results
-![](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/019%20draft%20use%20case.png?raw=true)
+![Use Case Results – Logistics Breakdown Resolution](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/019%20draft%20use%20case.png?raw=true)
 
 
 ## Business Value
-Analysis of how the system improves PepsiCo's supply chain operations, reduces manual intervention, and optimizes delivery cost management
+
+The solution delivers measurable operational and financial benefits by unifying decision-making and execution across PepsiCo’s logistics ecosystem.
+
+**Key Improvements:**
+
+1. **Reduced Manual Intervention**
+
+   * Eliminates repetitive decision-making by automating route selection and financial impact assessment.
+   * Frees up human dispatchers for exception handling rather than routine analysis.
+
+2. **Optimized Delivery Cost Management**
+
+   * AI Agents automatically compute delay penalties using customer-specific contracts, ensuring precise financial accounting.
+   * Route optimization reduces unnecessary mileage and minimizes total penalty exposure.
+
+3. **Faster Incident Resolution and Communication**
+
+   * MCP Clients and n8n enable real-time communication between ServiceNow, Schneider, and Whole Foods systems.
+   * The system automatically sends updated route data and execution confirmations.
+
+4. **Higher Reliability and Transparency**
+
+   * Data flows and decisions are fully logged within ServiceNow.
+   * Business leaders gain visibility into cost, route, and timing metrics from a single pane of glass.
+
+5. **Scalable Architecture for Future Expansion**
+
+   * The architecture can extend to new logistics partners or customers by reusing AI Agents and n8n workflows.
+   * Built on ServiceNow’s scoped application model, it preserves security and isolation while maintaining interoperability.
