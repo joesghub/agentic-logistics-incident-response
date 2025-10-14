@@ -332,7 +332,7 @@ Do not pass an array or comma-separated list of ETA values.
 Call the tool once per ETA (one value at a time).
 ```
 
-This change simplified debugging, ensured deterministic outputs, and increased tool success rate from 68% to 98%.
+This change simplified debugging, ensured deterministic outputs, and **increased tool success rate from 68% to 98%**.
 
 **Error Handling Enhancements**
 
@@ -373,7 +373,7 @@ Recent supply agreement and delay lookups can be cached within agent memory for 
 
 **Complex Optimization: Parallelized Route Evaluation with Error Recovery**
 
-The system can be extended to allow parallel ETA impact calculations while maintaining individual tool call isolation. This enables multi-route evaluation in real time and reduces decision latency by up to 70%. Each ETA value can run in an asynchronous subprocess. Checkpoints and retry logic ensure failed sub-tasks are retried automatically. Parall
+The system can be extended to allow parallel ETA impact calculations while maintaining individual tool call isolation. This enables multi-route evaluation in real time and reduces decision latency by up to 70%. Each ETA value can run in an asynchronous subprocess. Checkpoints and retry logic ensure failed sub-tasks are retried automatically. Parallel outputs can be merged into structured JSON for agent decision-making.
 
 ## Testing Results
 Evidence of successful end-to-end system operation with specific examples of financial analysis, routing decisions, and external execution
