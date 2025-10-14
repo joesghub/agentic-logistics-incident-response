@@ -4,9 +4,9 @@ As a ServiceNow AI Systems Developer at PepsiCo, I built an automated supply cha
 
 ## System Overview
 
-The **Automated Supply Chain Incident Processing System** developed within ServiceNow enables PepsiCo to intelligently manage truck breakdowns, delivery delays, and contractual performance for major retail clients like **Whole Foods**.
+The **Logisitcs Breakdown Resolution System** developed within ServiceNow enables PepsiCo to intelligently manage truck breakdowns, delivery delays, and contractual performance for major retail clients like **Whole Foods**.
 
-When logistics providers such as **Schneider** report delivery delays, the system automatically triggers a multi-agent workflow that performs **financial impact analysis**, **route optimization**, and **external coordination** — all without manual intervention.
+When logistics providers such as **Schneider** report delivery delays, the system automatically triggers a multi-agent workflow that performs **financial impact analysis**, **route optimization**, and **external coordination** all without manual intervention.
 
 The system integrates:
 
@@ -14,7 +14,7 @@ The system integrates:
 * **n8n workflow automation** for execution and data routing, and
 * **AWS Bedrock and MCP Clients** for cross-system orchestration and secure external communications.
 
-By using AI Agents inside ServiceNow to coordinate incidents and route decisions — and extending their actions to logistics and retail systems through n8n and MCP — the solution forms a closed-loop automation layer for PepsiCo’s delivery operations.
+By using AI Agents inside ServiceNow to coordinate incidents and route decisions, then extending their actions to logistics and retail systems through n8n and MCP, I built a closed-loop automation layer for PepsiCo’s delivery operations.
 
 **Business Impact:**
 
