@@ -91,7 +91,7 @@ However, I used a ServiceNow Workflow to remedy this issue by assigning new reco
 
 The second table in my system is a Supply Agreement table. It holds the contractual penalties for late shipments from Whole Foods (Retail Client).
 
-![Scoped Application – PepsiCo Deliveries](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/001%20pepsico_deliveries_scoped_application.png?raw=true)
+![Scoped Application – PepsiCo Deliveries](https://github.com/joesghub/agentic-logistics-incident-response/blob/main/screenshots/004%20supply_agreement_table.png?raw=true)
 
 **Supply Agreement Table Fields:**
 - `customer_id` (Integer, Primary Key)
