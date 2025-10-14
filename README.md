@@ -322,6 +322,7 @@ Through iterative agent refinement, script improvements, and workflow streamlini
 ### Implemented Optimizations
 
 **Script Efficiency Improvements**
+
 Early versions of the Route Financial Analysis Agent attempted to calculate multiple ETAs simultaneously using arrays, which caused inconsistent results and tool overload.
 
 In the final version, each ETA value is processed individually through the **Calculated Impacts Tool**, following strict linear iteration:
@@ -334,6 +335,7 @@ Call the tool once per ETA (one value at a time).
 This change simplified debugging, ensured deterministic outputs, and increased tool success rate from 68% to 98%.
 
 **Error Handling Enhancements**
+
 Structured **memory tracking** was implemented to maintain context across multi-tool calls. Conditional logic was added to handle absent or malformed data in supply agreements or delay records.
 
 Severity-based incident escalation rules were added to ensure proper routing to support teams:
@@ -345,6 +347,7 @@ If calculated_impact < 500 → urgency 3 - Low
 ```
 
 **Workflow Streamlining**
+
 Redundant ServiceNow business rules were consolidated into a single scoped application trigger for Delivery Delay updates. Context passing was embedded directly into the **Agent Memory** layer, eliminating repeated lookups.
 
 Mathematical operations such as penalty computation were moved to a dedicated **Calculated Impacts Tool**, separating AI reasoning from arithmetic logic.
@@ -364,10 +367,12 @@ Both agents now use **structured memory**, explicit tool invocation, and runtime
 
 ### Future Optimization Opportunities
 
-**Simple Optimization - Cached Data Reuse**
+**Simple Optimization: Cached Data Reuse**
+
 Recent supply agreement and delay lookups can be cached within agent memory for short-term reuse during the same run or user session. This reduces repetitive ServiceNow table queries by up to 50% and accelerates execution during high-volume events. The cache can be invalidated after 60 seconds.
 
-**Complex Optimization - Parallelized Route Evaluation with Error Recovery**
+**Complex Optimization: Parallelized Route Evaluation with Error Recovery**
+
 The system can be extended to allow parallel ETA impact calculations while maintaining individual tool call isolation. This enables multi-route evaluation in real time and reduces decision latency by up to 70%. Each ETA value can run in an asynchronous subprocess. Checkpoints and retry logic ensure failed sub-tasks are retried automatically. Parall
 
 ## Testing Results
