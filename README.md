@@ -1,5 +1,10 @@
 # PepsiCo and ServiceNow Logistics Breakdown Resolution System
-As a ServiceNow AI Systems Developer at PepsiCo, I built an automated supply chain incident processing system that enables the operations team to rapidly analyze financial impacts of truck breakdowns, select optimal rerouting options, and coordinate external execution with logistics providers and retail clients. By combining ServiceNow AI Agents, n8n workflow automation, and MCP-enabled communications, the system forms a closed-loop orchestration layer that reduces manual intervention, ensures contractual compliance, and maintains timely, cost-effective delivery operations.
+As a ServiceNow AI Systems Developer at PepsiCo, I built an automated supply chain incident processing system that enables the operations team to rapidly analyze financial impacts of truck breakdowns, select optimal rerouting options, and coordinate external execution with logistics providers and retail clients. 
+
+By combining **ServiceNow AI Agents**, **n8n workflow automation**, and **MCP-enabled communications**, the system forms a **closed-loop orchestration layer** that:
+- reduces manual intervention
+- ensures contractual compliance
+- maintains timely and cost-effective delivery operations
 
 
 ## System Overview
