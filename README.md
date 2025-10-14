@@ -1,4 +1,4 @@
-# agentic-logistics-incident-response
+# PepsiCo and ServiceNow Logistics Breakdown Resolution System
 As a ServiceNow AI Systems Developer at PepsiCo, I built an automated supply chain incident processing system that enables the operations team to rapidly analyze financial impacts of truck breakdowns, select optimal rerouting options, and coordinate external execution with logistics providers and retail clients. By combining ServiceNow AI Agents, n8n workflow automation, and MCP-enabled communications, the system forms a closed-loop orchestration layer that reduces manual intervention, ensures contractual compliance, and maintains timely, cost-effective delivery operations.
 
 
@@ -419,3 +419,7 @@ The solution delivers measurable operational and financial benefits by unifying 
 
    * The architecture can extend to new logistics partners or customers by reusing AI Agents and n8n workflows.
    * Built on ServiceNow’s scoped application model, it preserves security and isolation while maintaining interoperability.
+
+## 🤝🏾  Connect with Me
+[Joe's LinkedIn](https://www.linkedin.com/in/joeslnkdin/)
+
