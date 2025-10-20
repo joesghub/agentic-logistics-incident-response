@@ -426,5 +426,8 @@ The solution delivers measurable operational and financial benefits by unifying 
    * Built on ServiceNow’s scoped application model, it preserves security and isolation while maintaining interoperability.
 
 ## 🤝🏾  Connect with Me
+
 [Joe's LinkedIn](https://www.linkedin.com/in/joeslnkdin/)
+
+
 
